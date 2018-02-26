@@ -91,18 +91,18 @@ td.actions{
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li  >
-        	<a href='<?php echo site_url('administrador/educacion')?>'><i class="fa fa-lemon-o"></i> Educacion <span class="sr-only">(current)</span></a>
+        	<a href='<?php echo site_url('administrador/educacion')?>'><i class="fa fa-graduation-cap"></i> Educacion <span class="sr-only">(current)</span></a>
         </li>
         <li>
-        	<a href='<?php echo site_url('administrador/investigacion')?>'><i  class="fa fa-tags" ></i> Investigacion </a>
+        	<a href='<?php echo site_url('administrador/investigacion')?>'><i  class="fa fa-flask" ></i> Investigacion </a>
         </li>
         <li>
-          <a href='<?php echo site_url('administrador/promociones')?>'><i class="fa fa-bullhorn"></i> Promociones</a>
+          <a href='<?php echo site_url('administrador/investigacion_autores')?>'><i class="fa fa-users"></i> Investigacion autor</a>
         </li>
         <li>
-          <a href='<?php echo site_url('administrador/opiniones_facebook')?>'><i  class="fa fa-facebook-f" ></i> Opiniones facebook</a>
+          <a href='<?php echo site_url('administrador/investigacion')?>'> <i  class="fa fa-calendar" ></i> Novedades </a>
         </li>
-         <li>
+        <li>
           <a href='<?php echo site_url('administrador/contacto')?>'><i  class="fa fa-at" ></i> Contacto</a>
         </li>
         <li>

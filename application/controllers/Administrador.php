@@ -68,7 +68,7 @@ class Administrador extends CI_Controller {
 
 			$crud->callback_column('id_investigacion',array($this,'add_field_traer_autores'));
 
-			$crud->add_action('Editar Autores', '', 'Administrador/editar_autores');
+			//$crud->add_action('Editar Autores', '', 'Administrador/editar_autores');
 
  			//$crud->set_field_upload('archivo_programa','assets/documentos/investigaciones');
 
@@ -81,6 +81,31 @@ class Administrador extends CI_Controller {
 		}
 	}
 
+	public function investigacion_autores()
+	{
+		try{
+			$crud = new grocery_CRUD();
+
+			$crud->set_theme('datatables');
+			$crud->set_table('investigacion_autor');
+			$crud->set_relation('id_investigacion','investigacion','titulo');
+
+			$crud->set_subject('Investigación');
+			$crud->required_fields('nombre', 'apellido');
+			$crud->columns('id_investigacion','nombre', 'apellido', 'foto' );
+
+			$crud->display_as('id_investigacion','Investigacion'); 
+ 			
+ 			$crud->set_field_upload('foto','assets/img/autores');
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+	}
 
 	public function productos()
 	{
@@ -122,10 +147,11 @@ class Administrador extends CI_Controller {
 		return $var_autores;
 	}
 
+	/*
 	function add_field_traer_autores($value, $row)
 	{
 		 echo "valor".$value;
-	}
+	}*/
 
 
 }
