@@ -61,14 +61,17 @@ class Administrador extends CI_Controller {
 
 			$crud->set_subject('Investigación');
 			$crud->required_fields('titulo', 'id_tipo_investigacion');
-			$crud->columns('titulo','sito_publico', 'fecha', 'abstract', 'id_investigacion' );
+			$crud->columns('id_investigacion','titulo','sito_publico', 'fecha', 'abstract',  'Autores' );
 
 			$crud->display_as('id_tipo_investigacion','Tipo de investigación');
-			$crud->display_as('id_investigacion','Autores');
 
-			$crud->callback_column('id_investigacion',array($this,'add_field_traer_autores'));
-
-			//$crud->add_action('Editar Autores', '', 'Administrador/editar_autores');
+			$crud->callback_column('Autores',array($this,'add_field_traer_autores'));
+ 
+			//$crud->callback_column('Autores',array($this,'add_field_traer_autores'));
+ 
+			//$crud->unset_fields('id_investigacion');
+			
+			//$crud->add_action('Editar Autores', '', 'ABM autores');
 
  			//$crud->set_field_upload('archivo_programa','assets/documentos/investigaciones');
 
@@ -133,8 +136,10 @@ class Administrador extends CI_Controller {
 		}
 	}
 
+	/*
 	function add_field_traer_autores($value, $row)
-	{
+	{	
+
 		$autores = $this->Administrador_model->traer_autores_investigacion($value);
 
 		$var_autores = '';
@@ -145,8 +150,24 @@ class Administrador extends CI_Controller {
 		}
 
 		return $var_autores;
-	}
+	}*/
 
+	function add_field_traer_autores	($value, $row)
+	{	
+
+		$autores = $this->Administrador_model->traer_autores_investigacion($row->id_investigacion);
+
+		$var_autores = '';
+
+		foreach ($autores as $row) 
+		{
+			$var_autores .= $row['nombre']." <br>";
+		}
+
+		return $var_autores;
+
+	 
+	}
 	/*
 	function add_field_traer_autores($value, $row)
 	{
