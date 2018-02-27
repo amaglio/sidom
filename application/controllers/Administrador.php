@@ -66,7 +66,7 @@ class Administrador extends CI_Controller {
 			$crud->display_as('id_tipo_investigacion','Tipo de investigación');
 			$crud->display_as('id_investigacion','Autores');
 
-			$crud->callback_column('id_investigacion',array($this,'add_field_traer_autores'));
+			//$crud->callback_column('id_investigacion',array($this,'add_field_traer_autores'));
 
 			//$crud->add_action('Editar Autores', '', 'Administrador/editar_autores');
 
