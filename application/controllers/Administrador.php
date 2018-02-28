@@ -93,7 +93,7 @@ class Administrador extends CI_Controller {
 			$crud->set_table('investigacion_autor');
 			$crud->set_relation('id_investigacion','investigacion','titulo');
 
-			$crud->set_subject('Investigación');
+			$crud->set_subject('Autores');
 			$crud->required_fields('nombre', 'apellido');
 			$crud->columns('id_investigacion','nombre', 'apellido', 'foto' );
 
@@ -110,25 +110,19 @@ class Administrador extends CI_Controller {
 		}
 	}
 
-	public function productos()
+	public function contacto()
 	{
 		try{
 			$crud = new grocery_CRUD();
 
 			$crud->set_theme('datatables');
-			$crud->set_table('producto');
-			$crud->set_subject('Producto');
-			$crud->required_fields('nombre', 'id_tipo_producto');
-			$crud->columns('nombre','descripcion', 'id_tipo_producto', 'foto', 'precio' );
-
-			$crud->display_as('id_tipo_producto','Tipo de producto');
-
-			$crud->set_relation('id_tipo_producto','tipo_producto','descripcion');
-
-			$crud->set_field_upload('foto','assets/img/productos');
-
+			$crud->set_table('contacto');
+			$crud->set_subject('Contacto');
+			$crud->required_fields('nombre', 'apellido', 'email');
+			$crud->columns('nombre','apellido', 'email', 'telefono', 'comentario' );
+			$crud->unset_add();
 			$output = $crud->render();
-
+			
 			$this->_example_output($output);
 
 		}catch(Exception $e){
