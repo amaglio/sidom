@@ -52,7 +52,7 @@
                   <li><a href="<?=base_url()?>index.php/Auditoria">Auditorías</a></li>
                   <li><a href="<?=base_url()?>index.php/Proteccion_legal">Protección legal</a></li>
                   <li><a href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                  <li><a href="<?=base_url()?>index.php/Consulta">Consultas</a></li>
+                  <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
                 </ul>
             
               </div> 

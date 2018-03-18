@@ -1,10 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Consulta extends CI_Controller {
+class Contacto  extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct(); 
+		$this->load->model('Contacto_model');
 	}
 
 	public function index()
@@ -13,7 +14,9 @@ class Consulta extends CI_Controller {
 		$datos["head"] = $this->load->view('estructura/head', $datos_head, true);
 		$datos["footer"] = $this->load->view('estructura/footer', '', true);
 
-		$this->load->view('consultas.php',$datos);
+		$datos["contacto_motivos"] =  $this->Contacto_model->get_contacto_motivos();
+
+		$this->load->view('contacto.php',$datos);
 	}
 
  	 

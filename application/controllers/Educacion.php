@@ -5,6 +5,7 @@ class Educacion extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct(); 
+		$this->load->model('Educacion_model'); 
 	}
 
 	public function index()
@@ -13,6 +14,8 @@ class Educacion extends CI_Controller {
 		$datos["head"] = $this->load->view('estructura/head', $datos_head, true);
 		$datos["footer"] = $this->load->view('estructura/footer', '', true);
 
+		$datos["educaciones"] =  $this->Educacion_model->get_educacion();
+		
 		$this->load->view('educacion.php',$datos);
 	}
 
