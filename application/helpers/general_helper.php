@@ -20,13 +20,15 @@ if(!function_exists('mensaje_resultado'))
 
 if(!function_exists('enviar_email'))
 {
-    function enviar_email($email_to )
+    function enviar_email($array )
     {   
         $CI =& get_instance();
 
         $CI->load->library("email"); 
 
-        $configuracion_ucema = array(
+
+        /*
+        $configuracion = array(
             'protocol' => 'smtp',
             'smtp_host' => '10.0.0.3',
             'smtp_port' => 25,
@@ -35,48 +37,57 @@ if(!function_exists('enviar_email'))
             'mailtype' => 'html',
             'charset' => 'utf-8',
             'newline' => "\r\n"
+        );*/
+
+        $configuracion = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'digipayargentina@gmail.com',
+            'smtp_pass' => 'digipay2016',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'newline' => "\r\n"
         );
 
         //Cargamos la configuración 
 
-        $CI->email->initialize($configuracion_ucema);
-        $CI->email->from($email_operador,  $nombre_operador);
-        $CI->email->subject($subject);
-        $mensaje_email = '';
-
-        $texto = html_entity_decode( $texto , ENT_QUOTES, "UTF-8");
-       
-        $CI->email->to($email_to); 
-
-        // REEMPLAZAMOS LAS MARCAS EN EL EMAIL
-
-        $texto_modificado = $texto;
-
-  
-        $texto_modificado = str_replace("[Nombre y Apellido operador]", $nombre_operador, $texto_modificado );
-        $texto_modificado = str_replace("[Email Operador]", $email_operador, $texto_modificado );
-        $texto_modificado = str_replace("[Fecha envio]", date("d/m/Y") , $texto_modificado );
-        $texto_modificado = str_replace("[Nombre usuario]", $nombre_persona , $texto_modificado );
-
-        //echo $texto_modificado;
-             
-
-        $CI->email->message($texto_modificado);
+        $CI->email->initialize($configuracion);
+        $CI->email->from( "info@fundacionsidom.com" ,  "No reply");
+        $CI->email->subject("[SIDOM] Fundación SIDOM");
         
-        /*
+        $mensaje_email = 'Contacto WEB <br>';
+
+        $mensaje_email = "<strong>Nombre: </strong>".$array['nombre'].', '.$array['apellido']."<br>";
+        $mensaje_email .= "<strong>Email: </strong>".$array['email']."<br>";
+        $mensaje_email .= "<strong>Motivo: </strong>".$array['email']."<br>";
+
+        if(isset($array['telefono']))
+           $mensaje_email .= "<strong>Telefono: </strong>".$array['telefono']."<br>";
+
+        if(isset($array['consulta']))
+           $mensaje_email .= "<strong>Consulta: </strong>".$array['consulta']."<br>";
+
+        $CI->email->message($mensaje_email);
+
+
+        $email_to = "adrian.magliola@gmail.com";
+       
+        $CI->email->to($email_to);   
+       
+       
+
         if( $CI->email->send() ):
 
             chrome_log("ENVIO EL EMAIL"); 
-            $mensaje_resultado = "<span> &#9658; El email a ".$email_to." fue enviado exitosamente. </span> <br>";
          
         else:
             
             chrome_log("NO ENVIO EL EMAIL");
-            $mensaje_resultado = "<span> &#9658; El email a ".$email_to." NO fue enviado exitosamente. </span> <br>";
         
-        endif; */
+        endif;  
 
-         $mensaje_resultado = "<span> &#9658; El email a ".$email_to." fue enviado exitosamente. </span> <br>";
+         $mensaje_resultado = "<span> aaaa </";
 
         return $mensaje_resultado;
     }

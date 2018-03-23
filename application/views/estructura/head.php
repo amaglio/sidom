@@ -21,6 +21,15 @@
             CI_ROOT = "<?=base_url()?>";
     </script>
     
+    <style type="text/css">
+        
+        label.error
+        {
+            color:red;
+            font-size: 11px;
+        }
+
+    </style>
  
   </head>
   <body>
