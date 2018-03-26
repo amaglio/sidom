@@ -38,9 +38,7 @@ class Contacto  extends CI_Controller {
 				chrome_log("CARGO LA DB");
 				$this->session->set_flashdata('mensaje', 'Gracias por su Consulta ! La misma será respondida a la brevedad.');
 
-				$resultado_email = enviar_email($this->input->post());
-
-				
+				$resultado_envio_email = enviar_email($this->input->post());
 
 			else:
 

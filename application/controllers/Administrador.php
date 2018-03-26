@@ -125,10 +125,14 @@ class Administrador extends CI_Controller {
 			$crud->set_table('contacto');
 			$crud->set_subject('Contacto');
 			$crud->required_fields('nombre', 'apellido', 'email');
-			$crud->columns('nombre','apellido', 'email', 'telefono', 'comentario' );
+			$crud->columns('nombre','apellido', 'email', 'telefono', 'consulta', 'url_referer' );
 			$crud->unset_add();
+			$crud->unset_delete();
+			$crud->unset_edit();
 			$output = $crud->render();
 			
+			
+
 			$this->_example_output($output);
 
 		}catch(Exception $e){

@@ -76,19 +76,17 @@ if(!function_exists('enviar_email'))
         $CI->email->to($email_to);   
        
        
-
         if( $CI->email->send() ):
 
-            chrome_log("ENVIO EL EMAIL"); 
+            $resultado_envio_email = TRUE ;
          
         else:
             
-            chrome_log("NO ENVIO EL EMAIL");
+            $resultado_envio_email = FALSE ;
         
         endif;  
+ 
 
-         $mensaje_resultado = "<span> aaaa </";
-
-        return $mensaje_resultado;
+        return $resultado_envio_email;
     }
 }

@@ -24,21 +24,24 @@ class Contacto_model extends CI_Model {
   function alta_contacto($array)
   {
  	
- 	$array_contacto['nombre'] = $array['nombre'];
-  	$array_contacto['apellido'] = $array['apellido'];
-  	$array_contacto['email'] = $array['email'];
-  	$array_contacto['id_motivo'] = $array['id_motivo'];
+ 	  $array_contacto['nombre'] = $array['nombre'];
+    $array_contacto['apellido'] = $array['apellido'];
+    $array_contacto['email'] = $array['email'];
+    $array_contacto['id_motivo'] = $array['id_motivo'];
 
   	if($array['telefono'])
   		$array_contacto['telefono'] = $array['telefono'];
 
   	if($array['consulta'])
   		$array_contacto['consulta'] = $array['consulta'];
+
+    if( $_SERVER['HTTP_REFERER'] )
+      $array_contacto['url_referer'] = $_SERVER['HTTP_REFERER'];
 	
-	if( $this->db->insert('contacto',$array_insertar_info) )
-		return true;
-	else
-		return false;
+  	if( $this->db->insert('contacto',$array_contacto) )
+  		return true;
+  	else
+  		return false;
   
   }
  
