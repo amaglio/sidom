@@ -17,6 +17,8 @@
 
     <script type="text/javascript" src="<?=base_url()?>assets/dist/js/bootstrap.min.js"  ></script>
 
+
+
     <script type="text/javascript">
             CI_ROOT = "<?=base_url()?>";
     </script>
@@ -27,6 +29,16 @@
         {
             color:red;
             font-size: 11px;
+        }
+
+        .div_row
+        {
+            padding: 1.25rem;
+            /*margin-top: 1.25rem;*/
+            margin-bottom: 1.25rem;
+            border: 1px solid #eee;
+            /*border-left-width: .25rem;*/
+            border-radius: .25rem
         }
 
     </style>
@@ -56,12 +68,23 @@
                   <li><a href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
                   <li><a href="<?=base_url()?>index.php/Educacion">Educación</a></li>
                   <li><a href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
-                  <li><a href="<?=base_url()?>index.php/Novedad">Novedades</a></li>
-                  <li><a href="<?=base_url()?>index.php/Proyecto">Proyectos</a></li>  
+                  <li><a href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
+
+                  <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informacion <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
+                      <li><a href="<?=base_url()?>index.php/Auditoria">Información para la Gestión</a></li>
+                      <li><a href="<?=base_url()?>index.php/Proteccion_legal">Marco legal</a></li>
+                      <li><a href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
+                    </ul>
+                  </li>
+                  <!-- 
                   <li><a href="<?=base_url()?>index.php/Auditoria">Auditorías</a></li>
                   <li><a href="<?=base_url()?>index.php/Proteccion_legal">Protección legal</a></li>
                   <li><a href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                  <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
+                  <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>-->
                 </ul>
             
               </div> 

@@ -1,5 +1,11 @@
-    <section id="footer" class="container" style="border: 1px solid green;"> 
-        footer
+    <section id="footer"  > 
+       <div class="container">
+            <div class="row div_row">
+              <div class="col-md-12 col-xs-12 " style="background-color: pink "> 
+              FOOTER
+              </div>
+            </div>
+        </div>
     </section>
 
   	</body>
