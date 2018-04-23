@@ -7,3 +7,8 @@
     /*border-left-width: .25rem;*/
     border-radius: .25rem
 }
+
+.imagen_slider{
+	height: 350px !important;
+	width: -webkit-fill-available;
+}

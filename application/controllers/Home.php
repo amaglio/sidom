@@ -16,9 +16,9 @@ class Home extends CI_Controller {
 		$datos["head"] = $this->load->view('estructura/head', $datos_head, true);
 		$datos["footer"] = $this->load->view('estructura/footer', '', true);
 
-		$datos["educaciones"] =  $this->Educacion_model->get_educacion();
-		$datos["investigaciones"] =  $this->Investigacion_model->get_investigacion();
-		$datos["novedades"] =  $this->Novedad_model->get_novedad();
+		$datos["educaciones"] =  $this->Educacion_model->get_educacion_home();
+		$datos["investigaciones"] =  $this->Investigacion_model->get_investigacion_home();
+		$datos["novedades"] =  $this->Novedad_model->get_novedad_home();
 
 		$this->load->view('home.php',$datos);
 	}

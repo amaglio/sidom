@@ -1,7 +1,101 @@
-<?=$head?>
+<?=$head?> 
 
-    <section id="contenedor-central" class="container" style="border: 1px solid red;"> 
-        convenios
-    </section>
+<section id="seccion_convenio"> 	
+	
+ 
+	<section id="convenio_formulario"> 	
+		<div class="container">
+			<div class="row div_row">
+
+				<div class="col-md-8 col-xs-12 " style="background-color: blue "> 
+
+					<div class="row" style="background-color: blue ">
+						<div class="col-md-12 col-xs-12">
+							Imagen
+						</div>
+					</div>
+
+					<div class="row" style="background-color: yellow ">
+						<div class="col-md-12 col-xs-12">
+							Texto introductorio
+						</div>
+					</div>
+
+					<div class="row" style="background-color: grey ">
+						<div class="col-md-4 col-xs-12">
+							Imagen
+						</div>
+						<div class="col-md-8 col-xs-12">
+
+							<div class="row" style="background-color: red ">
+								<div class="col-md-12 col-xs-12">
+									Titulo
+								</div>
+							</div>
+
+							<div class="row" style="background-color: pink ">
+								<div class="col-md-12 col-xs-12">
+									Descripcion
+								</div>
+							</div>
+							 
+						</div>
+					</div>
+
+					<div class="row" style="background-color: grey ">
+						<div class="col-md-4 col-xs-12">
+							Imagen
+						</div>
+						<div class="col-md-8 col-xs-12">
+
+							<div class="row" style="background-color: red ">
+								<div class="col-md-12 col-xs-12">
+									Titulo
+								</div>
+							</div>
+
+							<div class="row" style="background-color: pink ">
+								<div class="col-md-12 col-xs-12">
+									Descripcion
+								</div>
+							</div>
+							 
+						</div>
+					</div>
+
+					<div class="row" style="background-color: grey ">
+						<div class="col-md-4 col-xs-12">
+							Imagen
+						</div>
+						<div class="col-md-8 col-xs-12">
+
+							<div class="row" style="background-color: red ">
+								<div class="col-md-12 col-xs-12">
+									Titulo
+								</div>
+							</div>
+
+							<div class="row" style="background-color: pink ">
+								<div class="col-md-12 col-xs-12">
+									Descripcion
+								</div>
+							</div>
+							 
+						</div>
+					</div>
+				 
+				
+
+				</div>
+
+				<div class="col-md-4 col-xs-12 " style="background-color: green "> 
+					Formulario
+				</div>
+			
+			</div>
+		</div>
+	</section>
+
+</section>
 
 <?=$footer?>

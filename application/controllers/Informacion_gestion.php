@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Proteccion_legal extends CI_Controller {
+class Informacion_gestion extends CI_Controller {
 
 	public function __construct()
 	{
@@ -9,11 +9,11 @@ class Proteccion_legal extends CI_Controller {
 
 	public function index()
 	{	
-		$datos_head["titulo"] = "SIDOM - Protección legal para la adultez mayor";
+		$datos_head["titulo"] = "SIDOM - Proyectos";
 		$datos["head"] = $this->load->view('estructura/head', $datos_head, true);
 		$datos["footer"] = $this->load->view('estructura/footer', '', true);
 
-		$this->load->view('proteccion_legal.php',$datos);
+		$this->load->view('informacion_gestion.php',$datos);
 	}
 }
- 	
+ 	 

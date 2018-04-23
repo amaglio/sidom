@@ -22,6 +22,21 @@ class Investigacion_model extends CI_Model {
 
     return $query->result_array();	
   }
+
+  function get_investigacion_home()
+  {
+  
+      $sql =  " SELECT  *,
+                        it.descripcion as descripcion_tipo_investigacion
+                FROM    investigacion i,
+                        investigacion_tipo it
+                WHERE i.id_investigacion_tipo = it.id_investigacion_tipo 
+                AND   i.home = 1 " ;
+
+    $query = $this->db->query( $sql );
+
+    return $query->result_array();  
+  }
  
 
 }

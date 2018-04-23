@@ -1,8 +1,8 @@
-<?=$head?>
+<?=$head?> 
 
-<section id="seccion_proyecto"> 	
+<section id="seccion_legal"> 	
 	
-	<section id="seccion_proyecto"> 	
+	<section id="seccion_legal"> 	
 		<div class="container">
 			<div class="row div_row">
 				Imagen
@@ -92,4 +92,5 @@
 	</section>
 
 </section>
-<?=$footer?>
+
+<?=$footer?> 

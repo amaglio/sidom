@@ -32,12 +32,14 @@ class Administrador extends CI_Controller {
 			$crud->set_theme('datatables');
 			$crud->set_table('educacion');
 			$crud->set_subject('Educacion');
-			$crud->required_fields('nombre', 'id_tipo_educacion');
-			$crud->columns('nombre','descripcion', 'id_tipo_educacion', 'nombre', 'cursada', 'certificacion' , 'contenidos_centrales', 'docentes' , 'archivo_programa'  );
+			$crud->required_fields('nombre', 'id_educacion_modalidad', 'id_educacion_tema');
+			$crud->columns('nombre', 'id_educacion_modalidad', 'id_educacion_tema', 'nombre', 'certificacion' , 'contenidos_centrales', 'docentes' , 'archivo_programa'  );
 
-			$crud->display_as('id_tipo_educacion','Tipo de educacion');
+			$crud->display_as('id_educacion_modalidad','Modalidad');
+			$crud->display_as('id_educacion_tema','Tema');
 
-			$crud->set_relation('id_tipo_educacion','tipo_educacion','descripcion');
+			$crud->set_relation('id_educacion_modalidad','educacion_modalidad','descripcion');
+			$crud->set_relation('id_educacion_tema','educacion_tema','descripcion');
  			
  			$crud->set_field_upload('archivo_programa','assets/documentos/programas');
 
@@ -57,29 +59,16 @@ class Administrador extends CI_Controller {
 
 			$crud->set_theme('datatables');
 			$crud->set_table('investigacion');
-			$crud->set_relation('id_tipo_investigacion','tipo_investigacion','descripcion');
+			$crud->set_subject('Investigacion');
+			$crud->required_fields('titulo', 'id_investigacion_tipo');
+			$crud->columns('id_investigacion','titulo','id_investigacion_tipo','resumen', 'fecha', 'imagen',  'autores' );
 
-			$crud->set_subject('Investigación');
-			$crud->required_fields('titulo', 'id_tipo_investigacion');
-			$crud->columns('id_investigacion','titulo','sito_publico', 'fecha', 'abstract',  'Autores' );
+			$crud->set_relation('id_investigacion_tipo','investigacion_tipo','descripcion');
 
-			$crud->display_as('id_tipo_investigacion','Tipo de investigación');
+			$crud->display_as('id_investigacion_tipo','Tipo de investigación'); 
 
+			$crud->set_field_upload('imagen','assets/img/investigacion');
  
-			//$crud->callback_column('id_investigacion',array($this,'add_field_traer_autores'));
-
-			//$crud->add_action('Editar Autores', '', 'Administrador/editar_autores');
- 
-			$crud->callback_column('Autores',array($this,'add_field_traer_autores'));
- 
-			//$crud->callback_column('Autores',array($this,'add_field_traer_autores'));
- 
-			//$crud->unset_fields('id_investigacion');
-			
-			//$crud->add_action('Editar Autores', '', 'ABM autores');
- 
-
- 			//$crud->set_field_upload('archivo_programa','assets/documentos/investigaciones');
 
 			$output = $crud->render();
 
@@ -90,6 +79,28 @@ class Administrador extends CI_Controller {
 		}
 	}
 
+	public function novedad()
+	{
+		try{
+			$crud = new grocery_CRUD();
+
+			$crud->set_theme('datatables');
+			$crud->set_table('novedad');
+			$crud->set_subject('Novedad');
+			$crud->required_fields('titulo');
+			$crud->columns('titulo','sintesis','detalle','mudltimedia_embebed' );
+ 
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+	}
+
+	/*
 	public function investigacion_autores()
 	{
 		try{
@@ -114,7 +125,7 @@ class Administrador extends CI_Controller {
 		}catch(Exception $e){
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
-	}
+	}*/
 
 	public function contacto()
 	{

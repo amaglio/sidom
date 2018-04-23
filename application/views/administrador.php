@@ -95,12 +95,13 @@ td.actions{
         </li>
         <li>
         	<a href='<?php echo site_url('administrador/investigacion')?>'><i  class="fa fa-flask" ></i> Investigacion </a>
-        </li>
+        </li> 
+        <?/*
         <li>
           <a href='<?php echo site_url('administrador/investigacion_autores')?>'><i class="fa fa-users"></i> Investigacion autor</a>
-        </li>
+        </li> */ ?>
         <li>
-          <a href='<?php echo site_url('administrador/investigacion')?>'> <i  class="fa fa-calendar" ></i> Novedades </a>
+          <a href='<?php echo site_url('administrador/novedad')?>'> <i  class="fa fa-calendar" ></i> Novedades </a>
         </li>
         <li>
           <a href='<?php echo site_url('administrador/contacto')?>'><i  class="fa fa-at" ></i> Contacto</a>
