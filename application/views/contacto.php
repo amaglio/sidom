@@ -6,12 +6,15 @@
 		<div class="container">
 			<div class="row div_row">
 				 <div class="col-md-12 col-xs-12">
-				 TEXTO
+					<p> Billinghurst 1833 - Piso 10 </p>
+					<p> Buenos Aires - Argentina </p>
+					<p> +5411 4821-2105 </p>
+					<p> informes@fundacionsidom.org </p>
 				 </div>
 			</div>
 			<div class="row div_row">
 				 <div class="col-md-12 col-xs-12">
-				 MAPA
+				 <iframe style="width: -webkit-fill-available !important;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.206443832652!2d-58.625904767323895!3d-34.699972580434725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6e9955ec8af%3A0x363f0fc2c4ecf799!2sBillinghurst+1833%2C+B1755DSC+Rafael+Castillo%2C+Buenos+Aires!5e0!3m2!1ses!2sar!4v1524535428571" width="auto" height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>
 				 </div>
 			</div>
 			<div class="row div_row">

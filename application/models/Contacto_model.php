@@ -14,7 +14,7 @@ class Contacto_model extends CI_Model {
   {
  	
   	$sql =  "	SELECT *
-	    		FROM   contacto_motivo " ;
+	    		    FROM   contacto_motivo " ;
 
   	$query = $this->db->query( $sql );
 

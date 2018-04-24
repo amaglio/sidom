@@ -16,8 +16,6 @@ if(!function_exists('mensaje_resultado'))
     }
 }
 
- 
-
 if(!function_exists('enviar_email'))
 {
     function enviar_email($array )
@@ -88,5 +86,23 @@ if(!function_exists('enviar_email'))
  
 
         return $resultado_envio_email;
+    }
+}
+
+if(!function_exists('formulario_contacto'))
+{
+    function formulario_contacto()
+    { 
+        ?>
+            <form>
+                <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+                <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Telefono">
+                <textarea class="form-control"  class="form-control" rows="5" name="comentario" id="comentario"placeholder="Comentario"></textarea>
+                <input type="submit" name="login" class="btn btn-primary btn-block" value="Enviar">
+            </form>
+
+        <?
     }
 }

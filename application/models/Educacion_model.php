@@ -40,6 +40,28 @@ class Educacion_model extends CI_Model {
 
     return $query->result_array();	
   }
+
+  function get_educacion_modalidad()
+  {
+  
+    $sql =  " SELECT *
+              FROM  educacion_modalidad" ;
+
+    $query = $this->db->query( $sql );
+
+    return $query->result_array();  
+  }
+
+  function get_educacion_tema()
+  {
+  
+    $sql =  " SELECT *
+              FROM  educacion_tema" ;
+
+    $query = $this->db->query( $sql );
+
+    return $query->result_array();  
+  }
  
 
 }

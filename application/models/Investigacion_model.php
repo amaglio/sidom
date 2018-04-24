@@ -10,13 +10,14 @@ class Investigacion_model extends CI_Model {
 	}
  
 
-  function get_investigacion()
+  function get_investigaciones()
   {
  	
-  	$sql =  "	SELECT *
-	    			  FROM  investigacion i,
-                    investigacion_tipo it
-              WHERE i.id_investigacion_tipo = it.id_investigacion_tipo " ;
+  	$sql =  "	SELECT  *,
+                      it.descripcion as descripcion_tipo_investigacion
+              FROM    investigacion i,
+                      investigacion_tipo it
+              WHERE i.id_investigacion_tipo = it.id_investigacion_tipo  " ;
 
   	$query = $this->db->query( $sql );
 
@@ -37,6 +38,19 @@ class Investigacion_model extends CI_Model {
 
     return $query->result_array();  
   }
+
+  function investigacion_tipo()
+  {
+  
+      $sql =  " SELECT *
+                FROM investigacion_tipo " ;
+
+    $query = $this->db->query( $sql );
+
+    return $query->result_array();  
+  }
+
+
  
 
 }

@@ -9,12 +9,11 @@ class Novedad_model extends CI_Model {
 		parent::__construct();
 	}
 
-
-	function get_novedad()
+	function get_novedades()
 	{
 		
 		$sql =  "	SELECT *
-	    			  FROM  novedad n   " ;
+	    			FROM  novedad n   " ;
 
 		$query = $this->db->query( $sql );
 
