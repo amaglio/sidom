@@ -1,5 +1,12 @@
 #img_la_fundacion
 {
-    width: -webkit-fill-available;
+    width: inherit;
+}
+
+
+#img_equipo
+{
+       width: -webkit-fill-available;
+ 
 }
 

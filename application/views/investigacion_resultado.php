@@ -23,7 +23,7 @@
  
 								<div class="col-md-6"> 
 									<select class="form-control" id="id_tipo" name="id_tipo">
- 
+
 										<option selected value="" hidden="hidden">Seleccionar Tipo...</option>
 										<? foreach ($investigacion_tipo as $row_tipo): ?>
 										    
@@ -40,31 +40,49 @@
 						</form>
 					</div>
 					<div class="row"  >
-						<?php foreach ($investigaciones as $row ):
 
-							$id_investigacion = $row['id_investigacion']; ?>
 
-							<div class="row  ">
+						<?php if(count($investigaciones) > 0): ?>
+ 			
+				 			<div class="row div_row row_resultado" >
+				 				<div class="col-lg-12" >
+				 					
+				 					<?php if(isset($descripcion_tipo)) echo $descripcion_tipo; ?>
+				 		 
+				 				</div>
+				 			</div>
 
-							 	<div class="col-md-4 col-xs-12">
-							 		<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
-							 	</div>
-							 	<div class="col-md-8 col-xs-12">
 
-							 		<a class="item_nombre" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'>
-							 			 <?=$row['titulo']?> 
-							 		</a>
 
-							 		<br>
-							 		<span><?=$row['autores']?></span> <br>
-							 		<span><?=$row['resumen']?></span>
-							 		<span><?=$row['fecha']?></span>
-							 		<span><?=$row['actividades']?></span>
-							 	</div>
+							<?php foreach ($investigaciones as $row ): 
 
-						   	</div>
+								$id_investigacion = $row['id_investigacion'];
+							?>
 
-						<?php endforeach ?>
+								<div class="row  ">
+
+								 	<div class="col-md-4 col-xs-12">
+								 		<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
+								 	</div>
+								 	<div class="col-md-8 col-xs-12">
+
+								 		<a class="item_nombre"  href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'><span><?=$row['titulo']?></span></a> <br>
+								 		<span><?=$row['autores']?></span> <br>
+								 		<span><?=$row['resumen']?></span>
+								 		<span><?=$row['fecha']?></span>
+								 		<span><?=$row['actividades']?></span>
+								 	</div>
+
+							   	</div>
+
+							<?php endforeach ?>
+
+						<?php else: ?>
+
+								<span style="color:red">No se han encontrado resultados </span>
+
+						<?php endif; ?>
+
 					</div>
 				</div>
 

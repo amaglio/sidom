@@ -18,16 +18,24 @@
 
 				<div class="col-md-8 col-xs-12 "  > 
 					<div class="row" >
-						<?php foreach ($novedades as $row ): ?>
+						<?php foreach ($novedades as $row ): 
+
+								$id_novedad = $row['id_novedad'];
+
+						?>
 
 							<div class="row  ">
  
 							 	<div class="col-md-12 col-xs-12">
 
-							 		<span><?=$row['titulo']?></span>
+							 		<a class="item_nombre" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
+							 			 <?=$row['titulo']?>
+							 		</a>
+
+							 		<h3><span></span></h3>
 							 		<span><?=$row['sintesis']?></span>
 							 		<span><?=$row['detalle']?></span>
-
+							 		<div> <?=$row['mudltimedia_embebed']?> </div>
 							 	</div>
 
 						   	</div>

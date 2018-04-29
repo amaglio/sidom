@@ -28,6 +28,48 @@ class Contacto  extends CI_Controller {
 			
 			chrome_log("NO PASO");
 			$this->session->set_flashdata('mensaje', 'Error al validar los datos.');
+			$mensaje_resultado = "No paso validacion";
+
+		else:
+		
+			chrome_log("PASO");
+
+			if ( $this->Contacto_model->alta_contacto( $this->input->post() ) ):
+			
+				chrome_log("CARGO LA DB");
+				$this->session->set_flashdata('mensaje', 'Gracias por su Consulta ! La misma será respondida a la brevedad.');
+
+				$resultado_envio_email = enviar_email($this->input->post());
+
+				$mensaje_resultado = "Contacto enviado exitosamente";
+
+			else:
+
+				chrome_log("NO CARGO LA DB");
+				$this->session->set_flashdata('mensaje', 'Ha ocurrido un error, por favor intente mas tarde o envienos un email a: informes@fundacionsidom.org. <br> Disculpe las molestias ocasionadas.');
+
+				$mensaje_resultado = "Error al enviar el contacto, intente mas tarde.";
+
+			endif;
+
+		endif;
+
+		$datos["head"] = $this->load->view('estructura/head', $datos_head, true);
+		$datos["footer"] = $this->load->view('estructura/footer', '', true);
+
+		$datos["mensaje_resultado"] = $mensaje_resultado;
+		$this->load->view('resultado_contacto.php',$datos);
+	}
+
+	public function enviar_email()
+	{	
+	 	chrome_log("procesar_contacto");
+	 	$datos_head["titulo"] = "SIDOM - Resultado consulta";
+	
+		if ($this->form_validation->run('procesa_contacto') == FALSE):
+			
+			chrome_log("NO PASO");
+			$this->session->set_flashdata('mensaje', 'Error al validar los datos.');
 
 		else:
 		
@@ -55,7 +97,6 @@ class Contacto  extends CI_Controller {
 
 		$this->load->view('resultado_contacto.php',$datos);
 	}
-
 
  	 
 }

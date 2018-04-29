@@ -19,162 +19,168 @@
 
     <script type="text/javascript" src="<?=base_url()?>assets/dist/js/bootstrap.min.js"  ></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 
 
     <script type="text/javascript">
             CI_ROOT = "<?=base_url()?>";
     </script>
     
+    <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet" type="text/css" >
+
     <style type="text/css">
-        
-        label.error
-        {
-            color:red;
-            font-size: 11px;
-        }
+      
+      label.error
+      {
+          color:red;
+          font-size: 11px;
+      }
 
-        .div_row
-        {
-            padding: 1.25rem;
-            /*margin-top: 1.25rem;*/
-            margin-bottom: 1.25rem;
-            border: 1px solid #eee;
-            /*border-left-width: .25rem;*/
-            border-radius: .25rem
-        }
+      .div_row
+      {
+          padding: 1.25rem;
+          /*margin-top: 1.25rem;*/
+          margin-bottom: 1.25rem;
+          border: 1px solid #eee;
+          /*border-left-width: .25rem;*/
+          border-radius: .25rem
+      }
 
-        #logo{
-          width: 170px;
-        }
+      #logo{
+        width: 170px;
+      }
 
-        .fa{
-          font-size: 20px;
-        }
+      .fa{
+        font-size: 20px;
+      }
 
-        
-        .navbar-collapse {
-              float: left;
-              width: 100%;
-              clear: both;
-        }
+      
+      .navbar-collapse {
+            float: left;
+            width: 100%;
+            clear: both;
+      }
 
-        #button_responsive{
-              background-color: #002650;
-        }
+      #button_responsive{
+            background-color: #002650;
+      }
 
-        .icon-bar{
-          background-color: white;
-        }
+      .icon-bar{
+        background-color: white;
+      }
 
-        .nav>li>a 
-        {
-            position: relative;
-            display: block;
-            padding: 10px 10px;
-        }
+      .nav>li>a 
+      {
+          position: relative;
+          display: block;
+          padding: 10px 10px;
+      }
 
-        .navbar-header{
-          padding: 10px 0px;
-        }
+      .navbar-header{
+        padding: 10px 0px;
+      }
 
-        .nav>li>a { 
-            padding: 10px 10px;
-            color: #002751;
-            font-weight: 600;
-        }
+      .nav>li>a { 
+          padding: 10px 10px;
+          color: #002751;
+          font-weight: 600;
+      }
 
-        
-        label.label_seccion{
-          padding: 5px;
-            background-color: #0025502e;
-            width: -webkit-fill-available;
-            color: black;
-            margin-bottom: 10px;
-            padding-left: 20px;
-        }
+      
+      label.label_seccion{
+        padding: 5px;
+          background-color: #0025502e;
+          width: -webkit-fill-available;
+          color: black;
+          margin-bottom: 10px;
+          padding-left: 20px;
+      }
 
-        .img_logo{
-          width: 150px;
-          float: right;
-          height: 70px
-        }
-
-
-        @media (min-width: 768px) {
-            .navbar-right {
-                margin-top: -60px;
-            }
- 
-
-        }
-
-        @media (max-width: 768px) {
- 
-
-            #div_redes{
-              display: none !important;
-              visibility: hidden;
-            }
+      .img_logo{
+        width: 150px;
+        float: right;
+        height: 70px
+      }
 
 
-        }
+      @media (min-width: 768px) {
+          .navbar-right {
+              margin-top: -60px;
+          }
 
 
-/* --- FOOTER --- */
-        
-    #footer_link
-    {
-        background-color: #212529;
-        color:#FFF;
-    }
+      }
 
-    #footer_redes
-    {
-        background-color: #131417;
-        color:#FFF;
-    }
+      @media (max-width: 768px) {
 
-    .footer_seccion
-    {
-        color: #947301 !important;
-    }
 
-    .footer_link_util
-    {
-        color: white !important;
-    }
+          #div_redes{
+            display: none !important;
+            visibility: hidden;
+          }
 
-    .link_menu{
-        color: #000;
-        font-weight: bold;
-        font-size: 14px;
-    font-weight: 500;
-    }
 
-    .item-footer{
-      list-style:none !important;
-    }
+      }
 
-    .fa-chevron-right{
-      font-size: 12px;
-    }
-    
-    .mr-3{
-      margin-right: 2rem!important;
-    }
-    
-    .link_footer{
-      color: white;
-    }
 
-    .link_footer:hover{
-      color: grey; 
-      text-decoration: none;
-    }
+      /* --- FOOTER --- */
+          
+      #footer_link
+      {
+          background-color: #212529;
+          color:#FFF;
+      }
+
+      #footer_redes
+      {
+          background-color: #131417;
+          color:#FFF;
+      }
+
+      .footer_seccion
+      {
+          color: #947301 !important;
+      }
+
+      .footer_link_util
+      {
+          color: white !important;
+      }
+
+      .link_menu{
+          color: #000;
+          font-weight: bold;
+          font-size: 14px;
+      font-weight: 500;
+      }
+
+      .item-footer{
+        list-style:none !important;
+      }
+
+      .fa-chevron-right{
+        font-size: 12px;
+      }
+
+      .mr-3{
+        margin-right: 2rem!important;
+      }
+
+      .link_footer{
+        color: white;
+      }
+
+      .link_footer:hover{
+        color: grey; 
+        text-decoration: none;
+      }
     
     </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
  
-  </head>
+    </head>
   <body>
 
     <section id="header" class="container"> 

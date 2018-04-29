@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url']	= 'http://localhost/sidom/';
-//$config['base_url']	= 'http://www.alimentarymix.com/';
+//$config['base_url']	= 'http://www.fundacionsidom.org/desarrollo/';
+//$config['base_url'] = 'http://www.cristinamoro.com.ar/sidom';
 
 /*
 |--------------------------------------------------------------------------

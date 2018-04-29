@@ -65,7 +65,7 @@ $config = array(
                                     array(
                                             'field' => 'id_motivo',
                                             'label' => 'id_motivo',
-                                            'rules' => 'required|trim|xss_clean'
+                                            'rules' => 'trim|xss_clean'
                                         ),
                                     array(
                                             'field' => 'consulta',
@@ -74,7 +74,28 @@ $config = array(
                                         )
                                 ),
 
- 
+              'buscar_cursos' => array(
+                                    array(
+                                            'field' => 'id_tema',
+                                            'label' => 'id_tema',
+                                            'rules' => 'trim|xss_clean|callback_validate_either'
+                                        ),
+                                    array(
+                                            'field' => 'id_modalidad',
+                                            'label' => 'id_modalidad',
+                                            'rules' => 'trim|xss_clean|callback_validate_either'
+                                        ) 
+                                ),
+
+
+              'buscar_investigacion' => array(
+                                    array(
+                                            'field' => 'id_tipo',
+                                            'label' => 'id_tipo',
+                                            'rules' => 'trim|xss_clean|required'
+                                        ) 
+                                ),
+         
                                 
 );
 

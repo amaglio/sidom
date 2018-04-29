@@ -20,13 +20,13 @@
 					<div class="row div_row" >
 						<div class="col-md-12 col-xs-12">
 							<div> 
-								<form id="form_buscar_cursos" name="form_buscar_cursos" class="form-inline" method="post" action="<?=site_url('curso/buscar_cursos')?>">
+								<form id="form_buscar_cursos" name="form_buscar_cursos" class="form-inline" method="post" action="<?=site_url('educacion/buscar_cursos')?>">
 
 									<div class="form-group col-lg-5" >
 		 
-										<select class="form-control  " id="id_tema" name="id_tema">
+										<select class="form-control  phone-group" id="id_tema" name="id_tema">
 
-											<option selected value="" hidden>Tema</option>
+											<option selected value="" hidden="hidden">Seleccionar Tema...</option>
 											<? foreach ($educacion_tema as $row_tema): ?>
 											    
 											    <option value="<?=$row_tema['id_educacion_tema']?>"><?=$row_tema['descripcion']?></option> 
@@ -35,9 +35,9 @@
 										</select>
 									</div>
 									<div class="form-group col-lg-5"> 
-										<select class="form-control  " id="id_modalidad" name="id_modalidad">
+										<select class="form-control  phone-group" id="id_modalidad" name="id_modalidad">
 
-											<option selected value="" hidden>Modalidad</option>
+											<option selected value="" hidden="hidden">Seleccionar Modalidad...</option>
 											<? foreach ($educacion_modalidad as $row_modalidad): ?>
 											    
 											    <option value="<?=$row_modalidad['id_educacion_modalidad']?>"><?=$row_modalidad['descripcion']?></option> 
@@ -46,7 +46,7 @@
 										</select>
 									</div>
 									<div class="form-group col-lg-2">
-										<button type="submit" class="btn btn-block btn-primary  "><i class="fa fa-search" style="color:white !important;"></i>Buscar</button>
+										<button type="submit" class="btn btn-block btn-primary  "><i class="fa fa-search" style="color:white !important;"></i>  Buscar</button>
 									</div>
 								</form>
 							</div>
@@ -56,7 +56,9 @@
 
 						<div class="col-md-12 col-xs-12">
 
-						<?php foreach ($educaciones as $row ): ?>
+						<?php foreach ($educaciones as $row ): 
+							$id_educacion = $row['id_educacion'];
+						?>
 
 							<div class="row div_row">
 
@@ -65,16 +67,19 @@
 					 				<div class="row">
 
 							    		<span class="col-md-12 col-xs-12" >
-							    			<h4><?php echo $row["nombre"];?></h4>
+							    			<a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+							    				 <?php echo $row["nombre"];?> 
+							    			</a>
 							    		</span>
 
 							    	</div>
 
 							    	<div class="row">
 
+							    		<!--
 							    		<span class="col-md-4 col-xs-12" >
 							    			<label>Cursada</label>
-							    		</span> 
+							    		</span> -->
 							    		<span class="col-md-8 col-xs-12" >
 							    			<?php echo $row["cursada"];?>
 							    		</span>
@@ -83,9 +88,10 @@
 
 							    	<div class="row">
 
+							    		<!--
 							    		<span class="col-md-4 col-xs-12" >
 							    			<label>Certificacion</label>
-							    		</span> 
+							    		</span> -->
 							    		<span class="col-md-8 col-xs-12" >
 							    			<?php echo $row["certificacion"];?>
 							    		</span>
@@ -93,18 +99,14 @@
 							    	</div>
 
 							    	<div class="row">
-							    		<span class="col-md-12 col-xs-12" >
-							    			<label>Contenido central</label>
-							    		</span> 
+							    		  
 							    		<span class="col-md-12 col-xs-12" >
 							    			<?php echo $row["contenidos_centrales"];?>
 							    		</span>
 						    		</div>
 
 						    		<div class="row">
-							    		<span class="col-md-12 col-xs-12" >
-							    			<label>Docentes</label>
-							    		</span> 
+							    		 
 							    		<span class="col-md-12 col-xs-12" >
 							    			<?php echo $row["docentes"];?>
 							    		</span>

@@ -76,16 +76,23 @@
             </div>
             <div class="row ">
 
-                <?php foreach ($investigaciones as $row): ?>
+                <?php foreach ($investigaciones as $row): 
+
+                  $id_investigacion = $row['id_investigacion'];
+
+                ?>
 
                       <div class="col-md-6 col-xs-12 " > 
 
                         <div class="row ">
-                            <div class="col-md-3 col-xs-12 " > 
-                              <img class="img-rounded img-thumbnail thumbnail" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
+                            <div class="col-md-4 col-xs-12 " > 
+                              <img class="img-rounded img-thumbnail foto_investigacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
                             </div>
-                            <div class="col-md-9 col-xs-12 " > 
-                              <span><?=$row['titulo']?></span><br>
+                            <div class="col-md-8 col-xs-12 " > 
+                              <a class="item_nombre" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'> 
+                                <?=$row['titulo']?>
+                              </a>
+                              <br>
                               <span><?=$row['descripcion_tipo_investigacion']?></span>
       
                                   
@@ -110,11 +117,18 @@
               </div>
               <div class="row ">
 
-                <?php foreach ($novedades as $row): ?>
+                <?php foreach ($novedades as $row): 
 
-                      <div class="col-md-4 col-xs-12 " > 
-                         <label class="col-xs-12" >   <?=$row['titulo']?></label>           
-                         <span class="col-xs-12"> <?=$row['sintesis']?></span>
+                    $id_novedad = $row['id_novedad'];
+
+                    ?>
+
+                      <div class="col-md-4 col-xs-12 " >
+                        <a class="item_nombre" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
+                          <?=$row['titulo']?>            
+                        </a>
+                        <br>
+                        <span><?=$row['sintesis']?></span> 
                       </div>
 
                 <?php endforeach;  ?>
@@ -138,24 +152,29 @@
               </div>
               <div class="row ">
 
-              <?php foreach ($educaciones as $row): ?>
+              <?php foreach ($educaciones as $row): 
+
+                    $id_educacion = $row['id_educacion'];
+              ?>
 
                
                     <div class="col-md-4 col-xs-12 " > 
                       <div class="form-group row">
-                          <label class="col-sm-3">Nombre</label>
+                          <!--<label class="col-sm-3">Nombre</label>-->
                           <div class="col-sm-8">
-                           <?=$row['nombre']?>
+                            <a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+                              <?=$row['nombre']?>
+                            </a>
                           </div>
                       </div>
                       <div class="form-group row">
-                          <label class="col-sm-3">Tema</label>
+                          <!--<label class="col-sm-3">Tema</label>-->
                           <div class="col-sm-8">
                            <?=$row['descripcion_tema']?>
                           </div>
                       </div>
                       <div class="form-group row">
-                          <label class="col-sm-3">Modalidad</label>
+                          <!--<label class="col-sm-3">Modalidad</label>-->
                           <div class="col-sm-8">
                            <?=$row['descripcion_modalidad']?>
                           </div>
@@ -171,7 +190,7 @@
     </section>
 
     <!-- Logos -->
-    <sectio4id="educacion">  
+    <sectio id="educacion">  
       <div class="container">
         <div class="row div_row">
               

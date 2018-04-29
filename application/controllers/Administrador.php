@@ -89,7 +89,8 @@ class Administrador extends CI_Controller {
 			$crud->set_subject('Novedad');
 			$crud->required_fields('titulo');
 			$crud->columns('titulo','sintesis','detalle','mudltimedia_embebed' );
- 
+ 			
+ 			$crud->callback_column('mudltimedia_embebed',array($this,'add_field_callback_1'));
 
 			$output = $crud->render();
 
@@ -98,6 +99,11 @@ class Administrador extends CI_Controller {
 		}catch(Exception $e){
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
+	}
+
+	function add_field_callback_1($value, $row)
+	{
+		return $value.'';
 	}
 
 	/*

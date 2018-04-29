@@ -1,9 +1,12 @@
     <section id="footer"  style="color: white"> 
-       
-            <div class="row " style="background-color: #002550 ; padding: 20px 0px;">
-                <div class="container">
+        
+        
+        <section id="sub_footer" style="background-color: #002550 ; padding: 20px 0px;">
+           <div class="container">
+            <div class="row " >
+               
                   <div class="col-md-4 col-xs-12 "> 
- 
+
                         <p>Billinghurst 1833 - Piso 10, Buenos Aires - Argentina</p>
                         <p>+5411 4821-2105</p>
                         <p>informes@fundacionsidom.org</p>
@@ -20,7 +23,7 @@
                   </div>
                    <div class="col-md-4 col-xs-12 " > 
                         <ul class="item-footer">
- 
+
                             <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
                             <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
                             <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
@@ -28,22 +31,36 @@
                             <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
                           </ul>
                   </div>
-                </div>
+                
             </div>
-            <div class="row" style="background-color: #01152b; padding-top: 20px; padding-bottom: 20px; text-align: center ">
-                <div class="container">
+          </div>
+        </section> 
+
+        
+
+        <section id="sub_footer" style="background-color: #01152b; padding-top: 20px; padding-bottom: 20px; text-align: center ">
+          <div class="container">
+            <div class="row" >
+                
                   <div class="col-md-12 col-xs-12 " > 
+                    
+
                     ©2018 Fundación SIDOM
-                  </div>
-                </div>
+
+                    </div>
+                  
+                
             </div>
+          </div>
+        </section>
      
     </section>
 
   	</body>
   	
-  	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.4.4.min.js"></script>
-	<script language="javascript" type="text/javascript" src="<?=base_url()?>assets/js/jquery.validate.js" ></script> 
+    <!-- Jquery validate -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js" ></script>
 
 
     <script>
@@ -52,7 +69,7 @@
 	
 	<script type="text/javascript">
 
-	 jq_va(function(){
+	  jq_va(function(){
 
             jq_va('#form_contacto').validate({
 
@@ -87,11 +104,92 @@
                         id_motivo : {
                             required : "Debe seleccionar el motivo"
                         } 
+                }/*,
+                submitHandler: function (form) 
+                {
+                    var values = jq_va('#form_contacto').serialize();
+
+                    //alert(values);
+
+                    jq_va.ajax({
+                      url: CI_ROOT+'index.php/contacto/enviar_email',
+                      async: true,
+                      data: values,
+                      type: 'POST' ,
+                      dataType: 'JSON',
+                      success: function(data)
+                      {   
+
+                          if(data.error == false)
+                          {
+                              alert("Se cambio el estado exitosamente");
+                              //location.reload();
+                          }
+                          else
+                          {
+                              alert("No se cambio el estado exitosamente");
+                          }
+                        },
+                        error: function(x, status, error){
+                          alert("No se ejecuto el cambio, intente mas tarde.");
+                      } 
+
+                    });  
+
+
+
+                }*/
+
+            });    
+    }); 
+    
+    jq_va(function(){
+
+            jq_va('#form_buscar_cursos').validate({
+
+                rules :{
+
+                      id_tema : {
+                          require_from_group: [1, ".phone-group"]
+                      },
+                      id_modalidad : {
+                          require_from_group: [1, ".phone-group"]
+                      }
+                },
+                messages : {
+
+                      id_tema : {
+                        require_from_group: "Debe seleccionar al menos un filtro"
+                      },
+                      id_modalidad : {
+                        require_from_group: "Debe seleccionar al menos un filtro"
+                      }
                 } 
 
             });    
     }); 
 
+    jq_va(function(){
+
+            jq_va('#form_buscar_investigacion').validate({
+
+                rules :{
+
+ 
+                      id_tipo : {
+                          required : true
+                      }
+                },
+                messages : {
+
+ 
+                      id_tipo : {
+                        required: "Debe seleccionar un tipo"
+                      }
+                } 
+
+            });    
+    });
  
 	</script>
 

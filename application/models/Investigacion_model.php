@@ -27,7 +27,7 @@ class Investigacion_model extends CI_Model {
   function get_investigacion_home()
   {
   
-      $sql =  " SELECT  *,
+    $sql =  " SELECT  *,
                         it.descripcion as descripcion_tipo_investigacion
                 FROM    investigacion i,
                         investigacion_tipo it
@@ -39,19 +39,78 @@ class Investigacion_model extends CI_Model {
     return $query->result_array();  
   }
 
-  function investigacion_tipo()
+  function get_informacion_educacion()
   {
   
-      $sql =  " SELECT *
-                FROM investigacion_tipo " ;
+    $sql =  " SELECT  *,
+                      it.descripcion as descripcion_tipo_investigacion
+              FROM    investigacion i,
+                      investigacion_tipo it
+              WHERE i.id_investigacion_tipo = it.id_investigacion_tipo 
+              AND   i.home = 1 " ;
 
     $query = $this->db->query( $sql );
 
     return $query->result_array();  
   }
 
+  function get_investigacion_tipo()
+  {
+  
+    $sql =  " SELECT *
+              FROM investigacion_tipo " ;
 
+    $query = $this->db->query( $sql );
+
+    return $query->result_array();  
+  }
+
+  function buscar_investigaciones($array)
+  { 
+    $modalidad = '';
+
+    if(!empty($array['id_tipo']))
+        $modalidad .= 'AND it.id_investigacion_tipo  = '.$array['id_tipo'];
  
+
+    $resultado = $this->db->query(" SELECT  *,
+                                            it.descripcion as descripcion_tipo_investigacion
+                                    FROM    investigacion i,
+                                            investigacion_tipo it
+                                    WHERE   i.id_investigacion_tipo = it.id_investigacion_tipo  
+                                            $modalidad
+
+                                    " );
+
+    return $resultado->result_array();
+  }
+
+  function get_informacion_investigacion($id_investigacion)
+  {
+  
+    $sql =  " SELECT  *,
+                        it.descripcion as descripcion_tipo_investigacion
+                FROM    investigacion i,
+                        investigacion_tipo it
+                WHERE i.id_investigacion_tipo = it.id_investigacion_tipo 
+                AND   i.id_investigacion = ? " ;
+
+    $query = $this->db->query( $sql , array($id_investigacion) );
+
+    return $query->row_array();  
+  }
+  
+  function get_tipo_descripcion($id_tipo)
+  {
+  
+    $sql =  " SELECT descripcion
+              FROM  investigacion_tipo
+              WHERE id_investigacion_tipo = ? " ;
+
+    $query = $this->db->query( $sql ,array($id_tipo) );
+
+    return $query->row()->descripcion;  
+  }
 
 }
 

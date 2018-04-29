@@ -31,6 +31,18 @@ class Novedad_model extends CI_Model {
 
 	return $query->result_array();	
 	}
+
+	function get_informacion_novedad($id_novedad)
+	{
+		
+		$sql =  "	SELECT *
+	    			FROM  novedad n   
+	    			WHERE id_novedad = ? " ;
+
+		$query = $this->db->query( $sql, array($id_novedad) );
+
+		return $query->row_array();	
+	}
 }
 
 /* End of file  */

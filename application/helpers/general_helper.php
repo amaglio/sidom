@@ -93,16 +93,58 @@ if(!function_exists('formulario_contacto'))
 {
     function formulario_contacto()
     { 
-        ?>
-            <form>
-                <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input class="form-control" type="email" name="email" id="email" placeholder="Email">
-                <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Telefono">
-                <textarea class="form-control"  class="form-control" rows="5" name="comentario" id="comentario"placeholder="Comentario"></textarea>
-                <input type="submit" name="login" class="btn btn-primary btn-block" value="Enviar">
+        $CI =& get_instance();
+        $CI->load->model('Contacto_model');
+        $contacto_motivos = $CI->Contacto_model->get_contacto_motivos();
+
+        ?>  
+            <div class="form-group">
+                <label>Dejanos tu consulta</label>
+            </div>
+            <form name="form_contacto" id="form_contacto" method="post" action="<?=base_url()?>index.php/contacto/procesar_contacto">
+                    
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Nombre *">  
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido *">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email *">
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Telefono">
+                </div>
+                
+                <div class="form-group">
+
+                    <?php  $motivos = array(); ?>
+
+                    <?php  $motivos[''] = "Elegir motivo"; ?>
+              
+                    <?php   foreach ($contacto_motivos as $row):  
+
+                                $motivos[$row['id_contacto_motivo']] = $row['descripcion'];
+
+                            endforeach; 
+                    ?>
+                    <?php
+                            
+                            echo form_dropdown('id_motivo', $motivos,  ''  ,'class="form-control" id="id_motivo" name="id_motivo" ' );
+                   ?>
+                </div>
+
+                <div class="form-group">
+                   <textarea class="form-control" id="consulta" name="consulta" placeholder="Comentario *"></textarea>
+                </div>
+
+               <input type="submit" class="btn btn-primary btn-block" name="enviar" id="enviar" value="Enviar">
+
             </form>
 
-        <?
+       <?
     }
-}
+} ?>
