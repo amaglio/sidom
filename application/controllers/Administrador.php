@@ -61,7 +61,7 @@ class Administrador extends CI_Controller {
 			$crud->set_table('investigacion');
 			$crud->set_subject('Investigacion');
 			$crud->required_fields('titulo', 'id_investigacion_tipo');
-			$crud->columns('id_investigacion','titulo','id_investigacion_tipo','resumen', 'fecha', 'imagen',  'autores' );
+			$crud->columns('id_investigacion','titulo','id_investigacion_tipo','resumen', 'fecha', 'imagen',  'autores','archivo_investigacion'   );
 
 			$crud->set_relation('id_investigacion_tipo','investigacion_tipo','descripcion');
 
@@ -69,6 +69,7 @@ class Administrador extends CI_Controller {
 
 			$crud->set_field_upload('imagen','assets/img/investigacion');
  
+			$crud->set_field_upload('archivo_investigacion','assets/documentos/investigaciones');
 
 			$output = $crud->render();
 
@@ -88,9 +89,11 @@ class Administrador extends CI_Controller {
 			$crud->set_table('novedad');
 			$crud->set_subject('Novedad');
 			$crud->required_fields('titulo');
-			$crud->columns('titulo','sintesis','detalle','mudltimedia_embebed' );
+			$crud->columns('titulo','sintesis','detalle','mudltimedia_embebed','foto_novedad'  );
  			
  			$crud->callback_column('mudltimedia_embebed',array($this,'add_field_callback_1'));
+
+ 			$crud->set_field_upload('foto_novedad','assets/img/novedad');
 
 			$output = $crud->render();
 

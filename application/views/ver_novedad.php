@@ -7,7 +7,9 @@
 	<section id="seccion_novedad"> 	
 		<div class="container">
 			<div class="row div_row">
-				 <img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/novedad.jpg">
+				<div class="col-md-12 col-xs-12 " > 
+					<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_novedades.png"> 
+				</div>
 			</div>
 		</div>
 	</section>
@@ -20,60 +22,49 @@
 					 
 					<div class="row div_row"  >
 
+						 
+
 						<div class="col-md-12 col-xs-12">
- 
-							<div class="row div_row">
 
-								<div class="col-md-12 col-xs-12">
+			 				<div class="row">
 
-					 				<div class="row">
+					    		<span class="col-md-12 col-xs-12" >
 
-							    		<span class="col-md-12 col-xs-12" >
- 
-							    				<h4><?php echo $novedad["titulo"];?></h4>
- 
-							    		</span>
+					    				<h4><?php echo $novedad["titulo"];?></h4>
 
-							    	</div>
+					    		</span>
 
-							    	<div class="row">
+					    	</div>
 
-							    		
-							    		<span class="col-md-12 col-xs-12" >
-							    			<?php echo $novedad["sintesis"];?>
-							    		</span>
+					    	<div class="row">
 
-							    	</div>
+					    		
+					    		<span class="col-md-12 col-xs-12" >
+					    			<?php echo $novedad["sintesis"];?>
+					    		</span>
 
-							    	<div class="row">
+					    	</div>
 
-							    		
-							    		<span class="col-md-12 col-xs-12" >
-							    			<?php echo $novedad["detalle"];?>
-							    		</span>
+					    	<div class="row">
 
-							    	</div>
+					    		
+					    		<span class="col-md-12 col-xs-12" >
+					    			<?php echo $novedad["detalle"];?>
+					    		</span>
 
-							    	<div class="row">
-							    	 
-							    		<span class="col-md-12 col-xs-12" >
-							    			<?php echo $novedad["mudltimedia_embebed"];?>
-							    		</span>
-						    		</div>
- 
+					    	</div>
 
-							    	<div class="row">
-							    		<span class="col-md-12 col-xs-12" >
-							    			<input type="submit" class="btn btn-xs" value="Ver programa">   
-							    		</span>
-						    		</div>
+					    	<div class="row">
+					    	 
+					    		<span class="col-md-12 col-xs-12" >
+					    			<?php echo $novedad["mudltimedia_embebed"];?>
+					    		</span>
+				    		</div>
 
-						   		</div>
 
-						   	</div>
- 
+				   		</div>
 
-						</div>
+						   	 
 
 					</div>
 

@@ -87,14 +87,24 @@ $config = array(
                                         ) 
                                 ),
 
-
+              /*
               'buscar_investigacion' => array(
                                     array(
                                             'field' => 'id_tipo',
                                             'label' => 'id_tipo',
                                             'rules' => 'trim|xss_clean|required'
                                         ) 
+                                ),*/
+                
+                'buscar_investigacion' => array(
+                                    array(
+                                            'field' => 'anio',
+                                            'label' => 'anio',
+                                            'rules' => 'trim|xss_clean|required'
+                                        ) 
                                 ),
+
+
          
                                 
 );

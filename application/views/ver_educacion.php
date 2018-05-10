@@ -7,8 +7,11 @@
 	<section id="seccion_educacion"> 	
 		<div class="container">
 			<div class="row div_row">
-				 <img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/educacion.jpeg">
+				<div class=" col-xs-12 " > 
+				 	<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_educacion.png">
+				</div>
 			</div>
+			
 		</div>
 	</section>
 
@@ -16,11 +19,7 @@
 		<div class="container">
 			<div class="row div_row">
 
-				<div class="col-md-8 col-xs-12 " > 
-					 
-					<div class="row div_row"  >
-
-						<div class="col-md-12 col-xs-12">
+				<div class="col-md-8 col-xs-12 " >  
  
 							<div class="row div_row">
 
@@ -70,18 +69,17 @@
 
 							    	<div class="row">
 							    		<span class="col-md-12 col-xs-12" >
-							    			<input type="submit" class="btn btn-xs" value="Ver programa">   
-							    		</span>
+								    		<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $educacion["archivo_programa"];?>" >  
+								    				Ver programa  
+								    		</a>
+								    	</span> 
 						    		</div>
 
 						   		</div>
 
 						   	</div>
  
-
-						</div>
-
-					</div>
+ 
 
 				</div>
 

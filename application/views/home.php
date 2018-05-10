@@ -1,5 +1,9 @@
 <?=$head?>
 
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  
+
 <link href="<?=base_url()?>/assets/css/home_css.css" rel="stylesheet">
 
 <section id="serccion_home">
@@ -22,15 +26,15 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                     <div class="item active">
-                     <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/foto1.jpg" alt="First slide">
+                     <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/sidom_home_1.png" alt="First slide">
                     </div>
 
                     <div class="item">
-                    <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/foto2.jpg" alt="Second slide">
+                    <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/sidom_home_2.png" alt="Second slide">
                     </div>
                   
                     <div class="item">
-                    <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/foto3.jpg" alt="Third slide">
+                    <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/sidom_home_3.png" alt="Third slide">
                     </div>
                   </div>
 
@@ -53,10 +57,10 @@
     <!-- Institucional -->
     <section id="institucional">  
       <div class="container">
-       <div class="row div_row">
+       <div class="row div_row" style=" color: #002852">
 
-          <div class="col-md-12 col-xs-12 "  > 
-            Institucional : Nuestro compromiso y trabajo se orientan a desarrollar acciones tendientes a lograr un avance sustancial en el tratamiento de la temática del envejecimiento poblacional. A partir de la investigación, el conocimiento y la trayectoria de nuestros equipos profesionales nos proponemos asumir el desafío de dar respuestas que contribuyan a proteger la salud funcional de las personas mayores, reducir los niveles de dependencia, fomentar el autocuidado, la identidad y el mayor grado de autonomía posible dentro de una sociedad que los incluya e integre social, económica y culturalmente como sujetos plenos de derechos.
+          <div class="col-md-12 col-xs-12 " > 
+            Nuestro compromiso y trabajo se orientan a desarrollar acciones tendientes a lograr un avance sustancial en el tratamiento de la temática del envejecimiento poblacional. A partir de la investigación, el conocimiento y la trayectoria de nuestros equipos profesionales, nos proponemos asumir el desafío de dar respuestas que contribuyan a proteger la salud funcional de las personas mayores, reducir los niveles de dependencia, fomentar el autocuidado, la identidad y el mayor grado de autonomía posible dentro de una sociedad que los incluya e integre social, económica y culturalmente como sujetos plenos de derechos.
           </div>
 
        </div>
@@ -71,18 +75,18 @@
           <div class="col-md-6 col-xs-12 div_row"  > 
             <div class="row ">
               <div class=" col-xs-12  "  > 
-                <label class="label_seccion">Investigaciones</label>
+                <label class="label_seccion"><span>I</span><span>nvestigaciones</span></label>
               </div>
             </div>
-            <div class="row ">
+           
 
                 <?php foreach ($investigaciones as $row): 
 
                   $id_investigacion = $row['id_investigacion'];
 
                 ?>
-
-                      <div class="col-md-6 col-xs-12 " > 
+                    <div class="row ">
+                      <div class="col-md-12 col-xs-12 " > 
 
                         <div class="row ">
                             <div class="col-md-4 col-xs-12 " > 
@@ -102,17 +106,17 @@
                        
 
                       </div>
-
+                    </div>
                 <?php endforeach;  ?>
 
-            </div>
+      
           </div>
 
   
           <div class="col-md-6 col-xs-12 div_row"  > 
               <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion">Novedades</label>
+                  <label class="label_seccion">NOVEDADES</label>
                 </div>
               </div>
               <div class="row ">
@@ -147,7 +151,7 @@
         <div class="row div_row"> 
               <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion">Cursos</label>
+                  <label class="label_seccion">CURSOS</label>
                 </div>
               </div>
               <div class="row ">
@@ -156,31 +160,20 @@
 
                     $id_educacion = $row['id_educacion'];
               ?>
-
-               
                     <div class="col-md-4 col-xs-12 " > 
-                      <div class="form-group row">
-                          <!--<label class="col-sm-3">Nombre</label>-->
-                          <div class="col-sm-8">
-                            <a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+                      <p>
+                        <a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
                               <?=$row['nombre']?>
-                            </a>
-                          </div>
-                      </div>
-                      <div class="form-group row">
-                          <!--<label class="col-sm-3">Tema</label>-->
-                          <div class="col-sm-8">
+                        </a>
+                      </p>
+                      <p>
                            <?=$row['descripcion_tema']?>
-                          </div>
-                      </div>
-                      <div class="form-group row">
-                          <!--<label class="col-sm-3">Modalidad</label>-->
-                          <div class="col-sm-8">
+                      </p>
+                       <p>
                            <?=$row['descripcion_modalidad']?>
-                          </div>
-                      </div>
-
+                      </p>
                     </div>
+                   
 
               <?php endforeach;  ?> 
 
@@ -189,8 +182,8 @@
       </div>
     </section>
 
-    <!-- Logos -->
-    <sectio id="educacion">  
+    <!-- Logos 
+    <sectio id="logos">  
       <div class="container">
         <div class="row div_row">
               
@@ -216,13 +209,38 @@
               </div>
        
       </div>
-    </section> 
+    </section> -->
+
+    <section id="logos">  
+
+      <div class="container">
+        <div class="row div_row">
+            <div class="row ">
+                <div class=" col-xs-12  "  > 
+                  <label class="label_seccion">CONVENIOS</label>
+                </div>
+              </div>
+
+            <section class="customer-logos slider">
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOBIOETICAR.jpg"></div>
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOSBUENOSAIRES.jpg"></div>
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOSGC.jpg"></div>
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOSIDOM.jpg"></div>
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOSSANFRANCISCO.jpg"></div>
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOSSIGLO21.jpg"></div>
+              <div class="slide"><img class="img_convenio" src="<?=base_url()?>assets/img/convenios/CONVENIOSVICENTELOPEZ.jpg"></div> 
+            </section>
+        </div>
+      </div>
+    </section>
+
+  
 
 </section>
 
     <script type="text/javascript">
-
-      $('.carousel').carousel();
+    /*
+      $('.carousel').carousel();*/
     </script>
 
 <?=$footer?>

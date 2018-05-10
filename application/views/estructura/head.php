@@ -13,6 +13,8 @@
 
     <link href="<?=base_url()?>assets/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" >
 
+    <link href="<?=base_url()?>assets/css/infinite-slider.css" rel="stylesheet" type="text/css" >
+
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" >
 
     <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"  ></script>
@@ -79,6 +81,7 @@
 
       .navbar-header{
         padding: 10px 0px;
+
       }
 
       .nav>li>a { 
@@ -89,12 +92,23 @@
 
       
       label.label_seccion{
-        padding: 5px;
-          background-color: #0025502e;
+          padding: 15px 10px;
+          /*background-color:#000;*/
           width: -webkit-fill-available;
-          color: black;
+              color: #000;
           margin-bottom: 10px;
           padding-left: 20px;
+          border-left:3px solid #088bba;
+      }
+
+      .label_seccion{
+          padding: 15px 10px;
+          /*background-color:#000;*/
+          width: -webkit-fill-available;
+              color: #000;
+          margin-bottom: 10px;
+          padding-left: 20px;
+          border-left:3px solid #088bba;
       }
 
       .img_logo{
@@ -175,7 +189,20 @@
         color: grey; 
         text-decoration: none;
       }
-    
+        
+        /*
+      a:hover[class="link_menu"] 
+      { 
+        background-color: red;
+
+      }
+
+      a.link_menu:hover
+      { 
+        background-color: red;
+
+      }*/
+
     </style>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
@@ -190,7 +217,7 @@
          
           <div class="container-fluid">
 
-            <div class="navbar-header">
+            <div class="navbar-header" style=" padding-bottom: 0px; padding-top: 0px; " >
 
               <button id="button_responsive" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 
@@ -200,94 +227,39 @@
                 <span class="icon-bar"></span>
 
               </button>
-              
-              <a class="navbar-brand" style="padding-top: 0px;padding-bottom: 0px; height: 70px;" href="#"> 
+             
+              <a class="navbar-brand" style="padding-top: 0px;padding-bottom: 0px; height: 70px;" href="<?=base_url()?>index.php/Home"> 
                 <img class="img-responsive" id="logo" src="<?=base_url()?>assets/img/logo.jpg" >
               </a>
             
             </div>
-            <div id="navbar" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <div id="navbar" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="padding-top: 10px;
+    padding-bottom: 10px;">
 
               <ul id="div_redes" class="nav navbar-nav navbar-right" >
-                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa icon_red_social fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa icon_red_social fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa icon_red_social fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa icon_red_social fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa icon_red_social fa-instagram"></i></a></li>
               </ul>
               <ul class="nav navbar-nav">
 
-                <li><a href="<?=base_url()?>index.php/Home">Home</a></li>
-                <li><a href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
-                <li><a href="<?=base_url()?>index.php/Educacion">Educación</a></li>
-                <li><a href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
-                <li><a href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
-                <li><a href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
-                <li><a href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
-                <li><a href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
-                <li><a href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Home">Home</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Educacion">Educación</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
+                <li><a class="link_menu" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
               </ul>
             
-            </div><!--/.nav-collapse  -->
-          </div>
-
-          <?/*
-          <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-              
-              <div class="row" style="background-color: red; height: 80px">
-                <div class="navbar-header" style="    background-color: grey;
-               height: -webkit-fill-available;">
-                  
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-
-                  <a class="navbar-brand" style="padding-top: 0px; padding-bottom: 0px" href="#"> 
-
-                    <img class="img-responsive" id="logo" src="<?=base_url()?>assets/img/logo.jpg" >
-                  </a>
-
-                  <span class="pull-right">
-                    asdasd
-                  </span>
-               
-
-
-
-                </div>
-
-              </div>
-              
-               <div class="row" style="background-color: green">
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="<?=base_url()?>index.php/Home">Home</a></li>
-                  <li><a href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
-                  <li><a href="<?=base_url()?>index.php/Educacion">Educación</a></li>
-                  <li><a href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
-                  <li><a href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
-                  <li><a href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
-                  <li><a href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
-                  <li><a href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
-                  <li><a href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                  <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
-                  <!--   
-                  <li><a href="<?=base_url()?>index.php/Auditoria">Auditorías</a></li>
-                  <li><a href="<?=base_url()?>index.php/Proteccion_legal">Protección legal</a></li>
-                  <li><a href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                  <li><a href="<?=base_url()?>index.php/Contacto">Consultas</a></li>-->
-                </ul>
-            
-              </div> 
-               </div> 
             </div> 
-          </nav>  
-          */ ?>
+          </div>
+ 
 
         </header>
       </div>

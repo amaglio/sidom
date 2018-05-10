@@ -8,43 +8,34 @@
 	<section id="seccion_investigacion"> 	
 		<div class="container">
 			<div class="row div_row">
-				<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion.jpg">
+				<div class="col-md-12 col-xs-12 " > 
+					<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_investigacion.png"> 
+				</div>
 			</div>
+			
 		</div>
 	</section>
 
 	<section id="cursos_formulario"> 	
 		<div class="container">
 			<div class="row div_row">
+				<div class="col-md-12 col-xs-12 " > 
+				  	Fundación SIDOM tiene un fuerte compromiso con la investigación centrada en la mejora de condiciones de vida de los adultos mayores y servicios orientados a ellos, a nivel local e internacional. Podrán conocer los proyectos de investigación en los que se participa, así como los artículos elaborados y congresos presenciados en el marco de la agenda de producción científica que tiene nuestro equipo de profesionales
+				</div>
+			</div>
+
+			<div class="row div_row">
 
 				<div class="col-md-8 col-xs-12 " > 
 					<div class="row div_row" >
-						<form id="form_buscar_investigacion" name="form_buscar_investigacion" class="form-inline" method="post" action="<?=site_url('investigacion/buscar_investigacion')?>">
- 
-								<div class="col-md-6"> 
-									<select class="form-control" id="id_tipo" name="id_tipo">
- 
-										<option selected value="" hidden="hidden">Seleccionar Tipo...</option>
-										<? foreach ($investigacion_tipo as $row_tipo): ?>
-										    
-										    <option value="<?=$row_tipo['id_investigacion_tipo']?>"><?=$row_tipo['descripcion']?></option> 
-
-										<?	endforeach; ?>
-									</select>
-								</div>
-								<div class=" col-md-4"> 
-						 
-									<button type="submit" class="btn btn-block btn-primary  "><i class="fa fa-search" style="color:white !important;"></i>Buscar</button>
-							 
-								</div>
-						</form>
+						 <?=buscador_investigaciones()?>
 					</div>
-					<div class="row"  >
+				 
 						<?php foreach ($investigaciones as $row ):
 
 							$id_investigacion = $row['id_investigacion']; ?>
 
-							<div class="row  ">
+							<div class="row row_listado" >
 
 							 	<div class="col-md-4 col-xs-12">
 							 		<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
@@ -60,12 +51,22 @@
 							 		<span><?=$row['resumen']?></span>
 							 		<span><?=$row['fecha']?></span>
 							 		<span><?=$row['actividades']?></span>
+
+							 		<?php if($row['archivo_investigacion']): ?>
+
+							 			<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/investigaciones/<?php echo $row["archivo_investigacion"];?>" >  
+
+							 			Ver investigacion
+
+							 			</a>
+
+							 		<?php endif; ?>
 							 	</div>
 
 						   	</div>
 
 						<?php endforeach ?>
-					</div>
+				 
 				</div>
 
 				<div class="col-md-4 col-xs-12 "> 

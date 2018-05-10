@@ -12,10 +12,12 @@ a[class="item_nombre"]
   	font-size: 15px ; 
   	font-weight: bold;
   	color: #002550;  
+    font-size: 18px;
 }
 
 a:hover[class="item_nombre"] 
 { 
+  
 	background-color: #d2d9e1;
 
 }
@@ -24,8 +26,15 @@ a{
 	text-decoration: none !important;
 }
 
+.img_header
+{
+  width: inherit !important;
+  /*height: 392px !important;*/
+}
+
 .foto_investigacion{
-	min-height: 50px;
+  height: 150px !important;
+  width: -webkit-fill-available;
 }
 
 .row_resultado
@@ -34,4 +43,49 @@ a{
     font-size: 18px;
     color: #002651;
     padding: 10px !important;
+}
+
+a:hover[class="link_menu"] 
+{ 
+  background-color: #068aba24 !important ;
+
+}
+
+
+a.link_menu:hover
+{ 
+  background-color: red;
+
+}
+
+.img_convenio
+{ 
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+
+}
+
+.icon_red_social
+{ 
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 10px 15px;
+
+}
+
+#logo{ 
+width: 150px !important;
+padding-top: 10px;
+}
+
+
+.row_listado
+{
+  padding-bottom: 10px;
+}
+
+.equipo
+{
+      font-size: 18px;
 }

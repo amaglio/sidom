@@ -7,8 +7,11 @@
 	<section id="seccion_educacion"> 	
 		<div class="container">
 			<div class="row div_row">
-				 <img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/educacion.jpeg">
+				<div class=" col-xs-12 " > 
+				 	<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_educacion.png">
+				</div>
 			</div>
+			
 		</div>
 	</section>
 
@@ -56,8 +59,8 @@
 
 						<?php if(count($educaciones) > 0): ?>
  			
-				 			<div class="row div_row row_resultado" >
-				 				<div class="col-lg-12" >
+				 		 
+				 				<div class="col-md-12 col-xs-12 row_resultado">
 				 					
 				 					<?php if(isset($descripcion_modalidad)) echo $descripcion_modalidad; ?>
 				 					
@@ -71,7 +74,7 @@
 				 					?>
 
 				 				</div>
-				 			</div>
+				 			 
 
 							<div class="col-md-12 col-xs-12">
 
@@ -87,9 +90,11 @@
 						 				<div class="row">
 
 								    		<span class="col-md-12 col-xs-12" >
-								    			<a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
-								    				 <?php echo $row["nombre"];?> 
-								    			</a>
+								    			<h4>
+									    			<a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+									    				 <?php echo $row["nombre"];?> 
+									    			</a>
+								    			</h4>
 								    		</span>
 
 								    	</div>
@@ -120,15 +125,21 @@
 							    		</div>
 
 							    		<div class="row">
-								    		
+							    		
 								    		<span class="col-md-12 col-xs-12" >
+								    			<label>Docentes</label>
 								    			<?php echo $row["docentes"];?>
 								    		</span>
 								    	</div>
 
 								    	<div class="row">
 								    		<span class="col-md-12 col-xs-12" >
-								    			<a class="btn btn-primary btn-xs" href="<?=base_url()?>/assets/documentos/programas/<?=$row["archivo_programa"]?>"> Ver programa </a> 
+								    			<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $row["archivo_programa"];?>" >  
+							    					Ver programa  
+								    			</a>
+								    			<a target="_blank" class="btn btn-s btn-success"  href='<?=site_url("educacion/ver_educacion/$id_educacion")?>' >  
+								    				Mas Informacion  
+								    			</a>
 								    		</span>
 							    		</div>
 

@@ -7,7 +7,9 @@
 	<section id="seccion_novedad"> 	
 		<div class="container">
 			<div class="row div_row">
-				<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/novedad.jpg">
+				<div class="col-md-12 col-xs-12 " > 
+					<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_novedades.png"> 
+				</div>
 			</div>
 		</div>
 	</section>
@@ -17,31 +19,31 @@
 			<div class="row div_row">
 
 				<div class="col-md-8 col-xs-12 "  > 
-					<div class="row" >
+					 
 						<?php foreach ($novedades as $row ): 
 
 								$id_novedad = $row['id_novedad'];
 
 						?>
 
-							<div class="row  ">
- 
-							 	<div class="col-md-12 col-xs-12">
+							<div class="row row_listado">
+ 								
+ 								<div class="col-md-3 col-xs-12">
+ 									<img class="img-thumbnail" src="<?=base_url()?>assets/img/novedad/<?=$row['foto_novedad']?>"> 			
+							 	</div>
+
+							 	<div class="col-md-9 col-xs-12">
 
 							 		<a class="item_nombre" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
 							 			 <?=$row['titulo']?>
-							 		</a>
-
-							 		<h3><span></span></h3>
-							 		<span><?=$row['sintesis']?></span>
-							 		<span><?=$row['detalle']?></span>
-							 		<div> <?=$row['mudltimedia_embebed']?> </div>
+							 		</a><br> 
+							 		<span><?=$row['sintesis']?></span> 
 							 	</div>
 
 						   	</div>
 
 						<?php endforeach ?>
-					</div>
+				 
 				</div>
 
 				<div class="col-md-4 col-xs-12 " > 

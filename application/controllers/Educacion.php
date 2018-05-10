@@ -16,8 +16,7 @@ class Educacion extends CI_Controller {
 
 		$datos["educaciones"] =  $this->Educacion_model->get_educacion();
 
-		$datos["educacion_modalidad"] =  $this->Educacion_model->get_educacion_modalidad();
-		$datos["educacion_tema"] =  $this->Educacion_model->get_educacion_tema();
+		
 		
 		$this->load->view('educacion.php',$datos);
 	}

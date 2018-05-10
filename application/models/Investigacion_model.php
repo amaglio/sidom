@@ -17,7 +17,8 @@ class Investigacion_model extends CI_Model {
                       it.descripcion as descripcion_tipo_investigacion
               FROM    investigacion i,
                       investigacion_tipo it
-              WHERE i.id_investigacion_tipo = it.id_investigacion_tipo  " ;
+              WHERE i.id_investigacion_tipo = it.id_investigacion_tipo  
+              ORDER BY i.fecha_orden DESC " ;
 
   	$query = $this->db->query( $sql );
 
@@ -32,7 +33,8 @@ class Investigacion_model extends CI_Model {
                 FROM    investigacion i,
                         investigacion_tipo it
                 WHERE i.id_investigacion_tipo = it.id_investigacion_tipo 
-                AND   i.home = 1 " ;
+                AND   i.home = 1 
+                ORDER BY i.fecha_orden DESC" ;
 
     $query = $this->db->query( $sql );
 
@@ -65,6 +67,7 @@ class Investigacion_model extends CI_Model {
     return $query->result_array();  
   }
 
+  /*
   function buscar_investigaciones($array)
   { 
     $modalidad = '';
@@ -83,7 +86,25 @@ class Investigacion_model extends CI_Model {
                                     " );
 
     return $resultado->result_array();
+  }*/
+
+  function buscar_investigaciones($array)
+  { 
+ 
+ 
+
+    $resultado = $this->db->query(" SELECT  *,
+                                            it.descripcion as descripcion_tipo_investigacion
+                                    FROM    investigacion i,
+                                            investigacion_tipo it
+                                    WHERE   i.id_investigacion_tipo = it.id_investigacion_tipo  
+                                    AND     YEAR(i.fecha) = ?
+                                    ORDER BY i.fecha_orden DESC
+                                    ", array($array['anio']) );
+
+    return $resultado->result_array();
   }
+
 
   function get_informacion_investigacion($id_investigacion)
   {

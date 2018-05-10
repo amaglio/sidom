@@ -8,8 +8,11 @@
 	<section id="seccion_investigacion"> 	
 		<div class="container">
 			<div class="row div_row">
-				<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion.jpg">
+				<div class="col-md-12 col-xs-12 " > 
+					<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_investigacion.png"> 
+				</div>
 			</div>
+			
 		</div>
 	</section>
 
@@ -19,28 +22,8 @@
 
 				<div class="col-md-8 col-xs-12 " > 
 					<div class="row div_row" >
-						<form id="form_buscar_investigacion" name="form_buscar_investigacion" class="form-inline" method="post" action="<?=site_url('investigacion/buscar_investigacion')?>">
- 
-								<div class="col-md-6"> 
-									<select class="form-control" id="id_tipo" name="id_tipo">
-
-										<option selected value="" hidden="hidden">Seleccionar Tipo...</option>
-										<? foreach ($investigacion_tipo as $row_tipo): ?>
-										    
-										    <option value="<?=$row_tipo['id_investigacion_tipo']?>"><?=$row_tipo['descripcion']?></option> 
-
-										<?	endforeach; ?>
-									</select>
-								</div>
-								<div class=" col-md-4"> 
-						 
-									<button type="submit" class="btn btn-block btn-primary  "><i class="fa fa-search" style="color:white !important;"></i>Buscar</button>
-							 
-								</div>
-						</form>
-					</div>
-					<div class="row"  >
-
+						<?=buscador_investigaciones()?>
+					</div> 
 
 						<?php if(count($investigaciones) > 0): ?>
  			
@@ -59,7 +42,7 @@
 								$id_investigacion = $row['id_investigacion'];
 							?>
 
-								<div class="row  ">
+								<div class="row row_listado">
 
 								 	<div class="col-md-4 col-xs-12">
 								 		<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
@@ -82,8 +65,7 @@
 								<span style="color:red">No se han encontrado resultados </span>
 
 						<?php endif; ?>
-
-					</div>
+ 
 				</div>
 
 				<div class="col-md-4 col-xs-12 "> 

@@ -20,7 +20,9 @@ class Educacion_model extends CI_Model {
                     educacion_tema et
               WHERE e.id_educacion_modalidad = em.id_educacion_modalidad
               AND e.id_educacion_tema = et.id_educacion_tema
-              AND   e.home = 1" ;
+              AND   e.home = 1
+              ORDER BY e.fecha_orden DESC
+              LIMIT 0,3" ;
 
     $query = $this->db->query( $sql );
 
@@ -51,7 +53,8 @@ class Educacion_model extends CI_Model {
   	$sql =  "	SELECT *
 	    			  FROM  educacion e,
                     educacion_modalidad em
-              WHERE e.id_educacion_modalidad = em.id_educacion_modalidad " ;
+              WHERE e.id_educacion_modalidad = em.id_educacion_modalidad 
+              ORDER BY e.fecha_orden DESC" ;
 
   	$query = $this->db->query( $sql );
 
@@ -100,7 +103,8 @@ class Educacion_model extends CI_Model {
                                     WHERE   e.id_educacion_modalidad = em.id_educacion_modalidad 
                                     AND     e.id_educacion_tema = et.id_educacion_tema 
                                             $modalidad
-                                            $tema " );
+                                            $tema 
+                                    ORDER BY e.fecha_orden DESC " );
 
     return $resultado->result_array();
   }

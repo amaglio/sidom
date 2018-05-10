@@ -13,7 +13,9 @@ class Novedad_model extends CI_Model {
 	{
 		
 		$sql =  "	SELECT *
-	    			FROM  novedad n   " ;
+	    			FROM  novedad n  
+	    			ORDER BY n.fecha_orden DESC
+	    			" ;
 
 		$query = $this->db->query( $sql );
 
@@ -25,7 +27,8 @@ class Novedad_model extends CI_Model {
 		
 		$sql =  "	SELECT *
 	    			FROM  novedad n   
-	    			WHERE n.home = 1" ;
+	    			WHERE n.home = 1
+	    			ORDER BY n.fecha_orden DESC " ;
 
 		$query = $this->db->query( $sql );
 
