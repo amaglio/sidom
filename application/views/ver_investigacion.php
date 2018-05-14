@@ -8,7 +8,9 @@
 	<section id="seccion_investigacion"> 	
 		<div class="container">
 			<div class="row div_row">
-				<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion.jpg">
+				<div class="col-md-12 col-xs-12 " > 
+					<img class="img-fluid rounded img_header img-rounded" src="<?=base_url()?>assets/img/headers/header_investigacion.png"> 
+				</div>
 			</div>
 		</div>
 	</section>
@@ -26,12 +28,23 @@
 							 		<img class="img-fluid rounded img-thumbnail" id="img_educacion" src="<?=base_url()?>assets/img/investigacion/<?=$investigacion['imagen']?>">
 							 	</div>
 							 	<div class="col-md-8 col-xs-12">
-
-							 		<a href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'><span><?=$investigacion['titulo']?></span></a> <br>
+									<span style="font-weight: bold; font-size: 16px"><?=$investigacion['titulo']?></span> <br>
 							 		<span><?=$investigacion['autores']?></span> <br>
 							 		<span><?=$investigacion['resumen']?></span>
 							 		<span><?=$investigacion['fecha']?></span>
 							 		<span><?=$investigacion['actividades']?></span>
+
+							 		<?php if($investigacion['archivo_investigacion']): ?>
+
+							 			<a target="_blank" class="btn btn-xs btn-success" href="<?=base_url()?>/assets/documentos/investigaciones/<?php echo $investigacion["archivo_investigacion"];?>" >  
+
+							 			Ver investigación
+
+							 			</a>
+
+								 		<?php endif; ?>
+
+
 							 	</div>
  
 					</div>

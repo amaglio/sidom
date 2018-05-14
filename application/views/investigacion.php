@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row div_row">
 				<div class="col-md-12 col-xs-12 " > 
-				  	Fundación SIDOM tiene un fuerte compromiso con la investigación centrada en la mejora de condiciones de vida de los adultos mayores y servicios orientados a ellos, a nivel local e internacional. Podrán conocer los proyectos de investigación en los que se participa, así como los artículos elaborados y congresos presenciados en el marco de la agenda de producción científica que tiene nuestro equipo de profesionales
+				  	<strong>Fundación SIDOM</strong> tiene un fuerte compromiso con la <strong> investigación centrada en la mejora de condiciones de vida de los adultos mayores y servicios orientados a ellos </strong>, a nivel local e internacional. Podrán conocer los proyectos de investigación en los que se participa, así como los artículos elaborados y congresos presenciados en el marco de la agenda de producción científica que tiene nuestro equipo de profesionales.
 				</div>
 			</div>
 
@@ -42,7 +42,7 @@
 							 	</div>
 							 	<div class="col-md-8 col-xs-12">
 
-							 		<a class="item_nombre" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'>
+							 		<a class="item_nombre hvr-overline-from-center" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'>
 							 			 <?=$row['titulo']?> 
 							 		</a>
 
@@ -54,13 +54,15 @@
 
 							 		<?php if($row['archivo_investigacion']): ?>
 
-							 			<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/investigaciones/<?php echo $row["archivo_investigacion"];?>" >  
+							 			<a target="_blank" class="btn btn-xs btn-success" href="<?=base_url()?>/assets/documentos/investigaciones/<?php echo $row["archivo_investigacion"];?>" >  
 
-							 			Ver investigacion
+							 			Ver investigación
 
 							 			</a>
 
 							 		<?php endif; ?>
+
+							 		<span><a class="btn btn-primary btn-xs pull-right" href="">+ Información</a></span>
 							 	</div>
 
 						   	</div>

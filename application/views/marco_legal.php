@@ -35,7 +35,7 @@
 					<a target="_blank" href="<?=base_url()?>assets/documentos/marco_legal/convencion_interamericana.pdf">
 					 	<img class="img-fluid rounded img-thumbnail img_proyecto" id="img_educacion" src="<?=base_url()?>assets/img/convenios/adultos_mayores.png">
 					</a>
-					 Convención interamericana sobre la protección de los derechos humanos de las personas mayores
+					<strong> Convención interamericana sobre la protección de los derechos humanos de las personas mayores </strong>
 				</div>
 				 
  
@@ -43,7 +43,7 @@
 					<a target="_blank" href="<?=base_url()?>assets/documentos/marco_legal/declaracion_madrid.pdf">
 					 	<img class="img-fluid rounded img-thumbnail img_proyecto" id="img_educacion" src="<?=base_url()?>assets/img/convenios/declaracion_madrid.png">
 					</a>
-					 Declaración política y plan de acción internacional de Madrid sobre el envejecimiento
+					 <strong>Declaración política y plan de acción internacional de Madrid sobre el envejecimiento</strong>
 						 
 					 
 				</div>
@@ -52,7 +52,7 @@
 					<a target="_blank" href="<?=base_url()?>assets/documentos/marco_legal/ley_ciudad.pdf">
 					 <img class="img-fluid rounded img-thumbnail img_proyecto" id="img_educacion" src="<?=base_url()?>assets/img/convenios/ley_prevencion.jpg"> 
 					</a>					
-						LEY J - N° 5.420: Prevención y protección integral contra abuso y maltrato a los adultos mayores. Ciudad de Buenos Aires				 
+					<strong> LEY J - N° 5.420: Prevención y protección integral contra abuso y maltrato a los adultos mayores. Ciudad de Buenos Aires</strong>				 
 				</div>
 			</div>
 		</div>

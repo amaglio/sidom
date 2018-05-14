@@ -49,11 +49,24 @@
 								 	</div>
 								 	<div class="col-md-8 col-xs-12">
 
-								 		<a class="item_nombre"  href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'><span><?=$row['titulo']?></span></a> <br>
+								 		<a class="item_nombre hvr-overline-from-center"  href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'><span><?=$row['titulo']?></span></a> <br>
 								 		<span><?=$row['autores']?></span> <br>
 								 		<span><?=$row['resumen']?></span>
 								 		<span><?=$row['fecha']?></span>
 								 		<span><?=$row['actividades']?></span>
+								 		
+								 		<?php if($row['archivo_investigacion']): ?>
+
+							 			<a target="_blank" class="btn btn-xs btn-success" href="<?=base_url()?>/assets/documentos/investigaciones/<?php echo $row["archivo_investigacion"];?>" >  
+
+							 			Ver investigación
+
+							 			</a>
+
+								 		<?php endif; ?>
+
+								 		<span><a class="btn btn-primary btn-xs pull-right" href="">+ Información</a></span>
+
 								 	</div>
 
 							   	</div>

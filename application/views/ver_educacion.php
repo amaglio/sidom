@@ -69,7 +69,7 @@
 
 							    	<div class="row">
 							    		<span class="col-md-12 col-xs-12" >
-								    		<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $educacion["archivo_programa"];?>" >  
+								    		<a target="_blank" class="btn btn-xs btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $educacion["archivo_programa"];?>" >  
 								    				Ver programa  
 								    		</a>
 								    	</span> 

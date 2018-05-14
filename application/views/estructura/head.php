@@ -15,7 +15,11 @@
 
     <link href="<?=base_url()?>assets/css/infinite-slider.css" rel="stylesheet" type="text/css" >
 
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" >
+    <link href="<?=base_url()?>assets/css/hover.css" rel="stylesheet" type="text/css" >
+    <!--
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" > -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
 
     <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"  ></script>
 
@@ -23,6 +27,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
     <script type="text/javascript">
@@ -87,28 +92,20 @@
       .nav>li>a { 
           padding: 10px 10px;
           color: #002751;
-          font-weight: 600;
+          font-weight: lighter;
       }
 
-      
-      label.label_seccion{
-          padding: 15px 10px;
-          /*background-color:#000;*/
-          width: -webkit-fill-available;
-              color: #000;
-          margin-bottom: 10px;
-          padding-left: 20px;
-          border-left:3px solid #088bba;
-      }
+  
 
       .label_seccion{
           padding: 15px 10px;
-          /*background-color:#000;*/
           width: -webkit-fill-available;
-              color: #000;
+          color: #000;
           margin-bottom: 10px;
           padding-left: 20px;
-          border-left:3px solid #088bba;
+        
+          font-size: 26px;
+          font-weight: 100;
       }
 
       .img_logo{
@@ -237,24 +234,28 @@
     padding-bottom: 10px;">
 
               <ul id="div_redes" class="nav navbar-nav navbar-right" >
-                <li><a href="#"><i class="fa icon_red_social fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa icon_red_social fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa icon_red_social fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa icon_red_social fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa icon_red_social fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab icon_red_social fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab icon_red_social fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab icon_red_social fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab icon_red_social fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab icon_red_social fa-instagram"></i></a></li>
               </ul>
               <ul class="nav navbar-nav">
 
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Home">Home</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Educacion">Educación</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                <li><a class="link_menu" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
+                <li>
+                    <a class="link_menu <? echo ($this->uri->segment(1) == 'Home')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Home">
+                      Home
+                    </a>
+                </li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'La_fundacion')? 'active' : ' ' ;  ?> " href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Educacion' OR $this->uri->segment(1) == 'educacion' )? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Educacion">Educación</a></li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Investigacion' OR $this->uri->segment(1) == 'investigacion')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Novedad' OR $this->uri->segment(1) == 'novedad' )? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Proyecto')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Informacion_gestion')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Marco_legal')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Convenio')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Contacto')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
               </ul>
             
             </div> 

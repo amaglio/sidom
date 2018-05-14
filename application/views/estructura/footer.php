@@ -14,21 +14,21 @@
                   </div>
                    <div class="col-md-4 col-xs-12 " > 
                         <ul class="item-footer">
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Home">Home</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Educacion">Educación</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Novedad">Novedades</a></li>  
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Home">Home</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/La_fundacion">La Fundación</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Educacion">Educación</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Novedad">Novedades</a></li>  
                         </ul>
                   </div>
                    <div class="col-md-4 col-xs-12 " > 
                         <ul class="item-footer">
 
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
-                            <li><i class="fa fa-chevron-right"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
+                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
                           </ul>
                   </div>
                 

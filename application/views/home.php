@@ -38,7 +38,7 @@
                     </div>
                   </div>
 
-                  <!-- Left and right controls -->
+                  <!-- Left and right controls 
                   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                     <span class="sr-only">Previous</span>
@@ -46,7 +46,7 @@
                   <a class="right carousel-control" href="#myCarousel" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
-                  </a>
+                  </a>-->
               </div>
  
           </div>
@@ -60,14 +60,14 @@
        <div class="row div_row" style=" color: #002852">
 
           <div class="col-md-12 col-xs-12 " > 
-            Nuestro compromiso y trabajo se orientan a desarrollar acciones tendientes a lograr un avance sustancial en el tratamiento de la temática del envejecimiento poblacional. A partir de la investigación, el conocimiento y la trayectoria de nuestros equipos profesionales, nos proponemos asumir el desafío de dar respuestas que contribuyan a proteger la salud funcional de las personas mayores, reducir los niveles de dependencia, fomentar el autocuidado, la identidad y el mayor grado de autonomía posible dentro de una sociedad que los incluya e integre social, económica y culturalmente como sujetos plenos de derechos.
+            Nuestro compromiso y trabajo se orientan a desarrollar acciones tendientes a <strong>lograr un avance sustancial en el tratamiento de la temática del envejecimiento poblacional</strong>. A partir de <strong>la investigación, el conocimiento y la trayectoria</strong> de nuestros equipos profesionales, nos proponemos asumir el desafío de <strong>dar respuestas que contribuyan a proteger la salud funcional de las personas mayores, reducir los niveles de dependencia, fomentar el autocuidado, la identidad y el mayor grado de autonomía posible dentro de una sociedad que los incluya e integre social, económica y culturalmente como sujetos plenos de derechos</strong>.
           </div>
 
        </div>
       </div>
     </section>
 
-     <!-- Institucional -->
+     <!-- INvestigaciones -->
     <section id="investigacion_novedades">  
       <div class="container">
         <div class="row  ">
@@ -75,7 +75,7 @@
           <div class="col-md-6 col-xs-12 div_row"  > 
             <div class="row ">
               <div class=" col-xs-12  "  > 
-                <label class="label_seccion"><span>I</span><span>nvestigaciones</span></label>
+                <label class="label_seccion" style="  border-left:3px solid #088bba;"><a   class="link_seccion"  href="<?=base_url()?>index.php/investigacion"> Investigaciones </a></label>
               </div>
             </div>
            
@@ -85,7 +85,7 @@
                   $id_investigacion = $row['id_investigacion'];
 
                 ?>
-                    <div class="row ">
+                    <div class="row row_listado">
                       <div class="col-md-12 col-xs-12 " > 
 
                         <div class="row ">
@@ -93,7 +93,7 @@
                               <img class="img-rounded img-thumbnail foto_investigacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
                             </div>
                             <div class="col-md-8 col-xs-12 " > 
-                              <a class="item_nombre" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'> 
+                              <a class="item_nombre hvr-overline-from-center" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'> 
                                 <?=$row['titulo']?>
                               </a>
                               <br>
@@ -108,7 +108,7 @@
                       </div>
                     </div>
                 <?php endforeach;  ?>
-
+                <a class="btn btn-primary btn-xs pull-right" href="">+ Investigación</a>
       
           </div>
 
@@ -116,29 +116,37 @@
           <div class="col-md-6 col-xs-12 div_row"  > 
               <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion">NOVEDADES</label>
+                  <label class="label_seccion" style="  border-left:3px solid red;"><a  class="link_seccion" href="<?=base_url()?>index.php/novedad">Novedades</a></label>
                 </div>
               </div>
-              <div class="row ">
-
+              
                 <?php foreach ($novedades as $row): 
 
                     $id_novedad = $row['id_novedad'];
 
                     ?>
+                    <div class="row row_listado">
 
-                      <div class="col-md-4 col-xs-12 " >
-                        <a class="item_nombre" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
+                      <?php if($row['foto_novedad']): ?>
+
+                        <div class="col-md-4 col-xs-12 " >
+                           <img class="img-rounded img-thumbnail foto_investigacion" src="<?=base_url()?>assets/img/novedad/<?=$row['foto_novedad']?>">
+                        </div>
+
+                      <?php endif; ?>
+
+                      <div class="col-md-8 col-xs-12 " >
+                        <a class="item_nombre hvr-overline-from-center" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
                           <?=$row['titulo']?>            
                         </a>
                         <br>
                         <span><?=$row['sintesis']?></span> 
                       </div>
-
+                     </div>
                 <?php endforeach;  ?>
 
-
-              </div>
+                <a class="btn btn-danger btn-xs pull-right" href="">+ Novedad</a>
+             
           </div>
 
         </div>
@@ -151,10 +159,10 @@
         <div class="row div_row"> 
               <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion">CURSOS</label>
+                  <label class="label_seccion" style="  border-left:3px solid green;"><a class="link_seccion" href="<?=base_url()?>index.php/educacion">Cursos</a></label>
                 </div>
               </div>
-              <div class="row ">
+              <div class="row row_listado">
 
               <?php foreach ($educaciones as $row): 
 
@@ -162,12 +170,12 @@
               ?>
                     <div class="col-md-4 col-xs-12 " > 
                       <p>
-                        <a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+                        <a class="item_nombre hvr-overline-from-center" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
                               <?=$row['nombre']?>
                         </a>
                       </p>
                       <p>
-                           <?=$row['descripcion_tema']?>
+                          <strong><?=$row['descripcion_tema']?> </strong> 
                       </p>
                        <p>
                            <?=$row['descripcion_modalidad']?>
@@ -178,6 +186,8 @@
               <?php endforeach;  ?> 
 
               </div> 
+
+              <a class="btn btn-success btn-xs pull-right" href="">+ Educación </a>
         </div>
       </div>
     </section>
@@ -217,7 +227,7 @@
         <div class="row div_row">
             <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion">CONVENIOS</label>
+                  <label class="label_seccion" style="  border-left:3px solid #d8a9b5;">Convenios</label>
                 </div>
               </div>
 

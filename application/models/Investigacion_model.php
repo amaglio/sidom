@@ -14,7 +14,8 @@ class Investigacion_model extends CI_Model {
   {
  	
   	$sql =  "	SELECT  *,
-                      it.descripcion as descripcion_tipo_investigacion
+                      it.descripcion as descripcion_tipo_investigacion,
+                      DATE_FORMAT(i.fecha, '%d/%m/%Y') as fecha
               FROM    investigacion i,
                       investigacion_tipo it
               WHERE i.id_investigacion_tipo = it.id_investigacion_tipo  
@@ -29,12 +30,14 @@ class Investigacion_model extends CI_Model {
   {
   
     $sql =  " SELECT  *,
-                        it.descripcion as descripcion_tipo_investigacion
+                        it.descripcion as descripcion_tipo_investigacion,
+                         DATE_FORMAT(i.fecha, '%d/%m/%Y') as fecha
                 FROM    investigacion i,
                         investigacion_tipo it
                 WHERE i.id_investigacion_tipo = it.id_investigacion_tipo 
                 AND   i.home = 1 
-                ORDER BY i.fecha_orden DESC" ;
+                ORDER BY i.fecha_orden DESC
+                LIMIT 0,3" ;
 
     $query = $this->db->query( $sql );
 
@@ -94,7 +97,8 @@ class Investigacion_model extends CI_Model {
  
 
     $resultado = $this->db->query(" SELECT  *,
-                                            it.descripcion as descripcion_tipo_investigacion
+                                            it.descripcion as descripcion_tipo_investigacion,
+                                             DATE_FORMAT(i.fecha, '%d/%m/%Y') as fecha
                                     FROM    investigacion i,
                                             investigacion_tipo it
                                     WHERE   i.id_investigacion_tipo = it.id_investigacion_tipo  
@@ -110,7 +114,8 @@ class Investigacion_model extends CI_Model {
   {
   
     $sql =  " SELECT  *,
-                        it.descripcion as descripcion_tipo_investigacion
+                        it.descripcion as descripcion_tipo_investigacion,
+                         DATE_FORMAT(i.fecha, '%d/%m/%Y') as fecha
                 FROM    investigacion i,
                         investigacion_tipo it
                 WHERE i.id_investigacion_tipo = it.id_investigacion_tipo 

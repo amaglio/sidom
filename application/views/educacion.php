@@ -20,7 +20,7 @@
 
 			<div class="row div_row">
 				<div class=" col-xs-12 " > 
-				 	Con modalidad presencial o in company, Fundación SIDOM concentra sus programas de formación y actualización profesional, a nivel local e internacional, en las áreas de cuidados domiciliarios e institucionales, servicios de gerontología, bioética, envejecimiento y salud. 
+				 	Con modalidad <strong> presencial o in company, Fundación SIDOM </strong> concentra sus programas de formación y actualización profesional, a nivel local e internacional, en las áreas de <strong> cuidados domiciliarios e institucionales, servicios de gerontología, bioética, envejecimiento y salud</strong>. 
 				</div>
 			</div>
 			<div class="row div_row">
@@ -48,7 +48,7 @@
 
 							    		<span class="col-md-12 col-xs-12" >
 							    			
-							    			<a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+							    			<a class="item_nombre hvr-overline-from-center" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
 							    				 <?php echo $row["nombre"];?> 
 							    			</a>
 							    		</span>
@@ -96,11 +96,17 @@
 
 							    	<div class="row">
 							    		<span class="col-md-12 col-xs-12" >
-							    			<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $row["archivo_programa"];?>" >  
+							    			
+							    			<?php if($row['archivo_programa']): ?>
+
+							    			<a target="_blank" class="btn btn-xs btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $row["archivo_programa"];?>" >  
 							    				Ver programa  
 							    			</a>
-							    			<a target="_blank" class="btn btn-s btn-success"  href='<?=site_url("educacion/ver_educacion/$id_educacion")?>' >  
-							    				Mas Informacion  
+
+							    			<?php endif; ?>
+
+							    			<a target="_blank" class="btn btn-xs btn-success pull-right"  href='<?=site_url("educacion/ver_educacion/$id_educacion")?>' >  
+							    				+ Información  
 							    			</a>
 							    		</span>
 						    		</div>

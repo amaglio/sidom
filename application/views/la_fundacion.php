@@ -71,7 +71,7 @@
 					<img class="img-fluid rounded img-thumbnail" id="img_equipo" src="<?=base_url()?>assets/img/equipo/retrato.jpg">
 				</div>
 				<div class="col-md-8 col-xs-12 " > 
-					<label class="equipo"> Marcelo Alvares </label> <br>
+					<label class="equipo"> Marcelo Álvarez </label> <br>
 	          		<label class="epigrafe"> Presidente Honorario </label>
 	          		<p>
 	          			Médico, UBA, 1981. Docente adscrito, Facultad de Medicina (FMED), UBA. Ex-Subsecretario de Asistencia Técnica de la FMED, UBA. Ex Coordinador General del Programa Social de Mayores (PROSOMA) de la Secretaría de Promoción Social del Gobierno de la Ciudad de Buenos Aires (1996-2000), en el marco del que desarrolló el Programa PROTEGER.

@@ -34,7 +34,7 @@
 
 							 	<div class="col-md-9 col-xs-12">
 
-							 		<a class="item_nombre" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
+							 		<a class="item_nombre hvr-overline-from-center" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
 							 			 <?=$row['titulo']?>
 							 		</a><br> 
 							 		<span><?=$row['sintesis']?></span> 

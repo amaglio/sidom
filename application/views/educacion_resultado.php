@@ -91,7 +91,7 @@
 
 								    		<span class="col-md-12 col-xs-12" >
 								    			<h4>
-									    			<a class="item_nombre" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
+									    			<a class="item_nombre hvr-overline-from-center" href='<?=site_url("educacion/ver_educacion/$id_educacion")?>'>
 									    				 <?php echo $row["nombre"];?> 
 									    			</a>
 								    			</h4>
@@ -134,13 +134,19 @@
 
 								    	<div class="row">
 								    		<span class="col-md-12 col-xs-12" >
-								    			<a target="_blank" class="btn btn-s btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $row["archivo_programa"];?>" >  
-							    					Ver programa  
-								    			</a>
-								    			<a target="_blank" class="btn btn-s btn-success"  href='<?=site_url("educacion/ver_educacion/$id_educacion")?>' >  
-								    				Mas Informacion  
-								    			</a>
-								    		</span>
+							    			
+							    			<?php if($row['archivo_programa']): ?>
+
+							    			<a target="_blank" class="btn btn-xs btn-primary" href="<?=base_url()?>/assets/documentos/programas/<?php echo $row["archivo_programa"];?>" >  
+							    				Ver programa  
+							    			</a>
+
+							    			<?php endif; ?>
+
+							    			<a target="_blank" class="btn btn-xs btn-success pull-right"  href='<?=site_url("educacion/ver_educacion/$id_educacion")?>' >  
+							    				+ Información  
+							    			</a>
+							    		</span>
 							    		</div>
 
 							   		</div>
