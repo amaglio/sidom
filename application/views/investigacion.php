@@ -23,7 +23,52 @@
 				  	<strong>Fundación SIDOM</strong> tiene un fuerte compromiso con la <strong> investigación centrada en la mejora de condiciones de vida de los adultos mayores y servicios orientados a ellos </strong>, a nivel local e internacional. Podrán conocer los proyectos de investigación en los que se participa, así como los artículos elaborados y congresos presenciados en el marco de la agenda de producción científica que tiene nuestro equipo de profesionales.
 				</div>
 			</div>
+			<div class="row div_row">
+				<div class="col-md-8 col-xs-12 " >
 
+					<div class="row row_listado">
+                      <div class="col-md-12 col-xs-12 " > 
+                        <div class="row ">
+                            <div class="col-md-2 col-md-offset-1 col-xs-12 " > 
+                               <i class="fas fa-book fa-3x icono_investigaciones"></i>
+                            </div>
+                            <div class="col-md-8  col-xs-12" > 
+                              <span class="titulo_investigaciones"><a href="<?=base_url()?>index.php/investigacion/ver_investigacion_tipo/1"> Publicaciones </a> </span>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="row row_listado">
+                      <div class="col-md-12 col-xs-12 " > 
+                        <div class="row ">
+                            <div class="col-md-2 col-md-offset-1 col-xs-12 " > 
+                               <i class="fas fa-flask fa-3x icono_investigaciones"></i>
+                            </div>
+                            <div class="col-md-8 col-xs-12 " > 
+                              <span class="titulo_investigaciones" ><a href="<?=base_url()?>index.php/investigacion/ver_investigacion_tipo/2">Proyectos de investigación </a></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="row row_listado">
+                      <div class="col-md-12 col-xs-12 " > 
+                        <div class="row ">
+                            <div class="col-md-2 col-md-offset-1 col-xs-12 " > 
+                               <i class="fas fa-graduation-cap fa-3x icono_investigaciones"></i>
+                            </div>
+                            <div class="col-md-8 col-xs-12 " > 
+                              <span class="titulo_investigaciones" ><a href="<?=base_url()?>index.php/investigacion/ver_investigacion_tipo/1">Congresos</a></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+
+				</div>
+				<div class="col-md-4 col-xs-12 "> 
+					<?=formulario_contacto()?>
+				</div>
+			</div>
+			<?/*
 			<div class="row div_row">
 
 				<div class="col-md-8 col-xs-12 " > 
@@ -62,7 +107,7 @@
 
 							 		<?php endif; ?>
 
-							 		<span><a class="btn btn-primary btn-xs pull-right" href="">+ Información</a></span>
+							 		<span><a class="btn btn-primary btn-xs pull-right" href="<?=base_url()?>index.php/investigacion/ver_investigacion/<?=$row['id_investigacion']?>">+ Información</a></span>
 							 	</div>
 
 						   	</div>
@@ -76,6 +121,9 @@
 				</div>
 			
 			</div>
+			*/ ?>
+
+
 		</div>
 	</section>
 

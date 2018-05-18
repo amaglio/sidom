@@ -7,7 +7,8 @@
 
 .titulo{
 	font-weight: bold;
-	height: 80px;
+	min-height: 80px;
+	padding-top: 10px;
 }
 </style>
 
@@ -44,13 +45,17 @@
 
 			<div class="row div_row" >
 				<div class="col-md-4 col-xs-12"> 
+
 					<div class="titulo"> Indicadores de situación social y calidad de vida de las personas mayores</div>
 				 	<img class="   img-thumbnail" src="<?=base_url()?>assets/img/gestion/indicadores-02-01.png">
 				 	
 
 				</div>
 				<div class="col-md-4 col-xs-12"> 
-					<div class="titulo">Sistema de información para la evaluación de calidad de servicios para personas con comorbilidades.<p style="font-weight: 600; font-size: 13px; color:grey">Software exclusivo de la Fundación SIDOM</p> 
+
+					<div class="titulo">Sistema de información para la evaluación de calidad de servicios para personas con comorbilidades.
+
+					<p style="font-weight: 600; font-size: 13px; color:grey">Software exclusivo de la Fundación SIDOM</p> 
 
 					</div> 
 				 	

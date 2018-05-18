@@ -75,40 +75,47 @@
           <div class="col-md-6 col-xs-12 div_row"  > 
             <div class="row ">
               <div class=" col-xs-12  "  > 
-                <label class="label_seccion" style="  border-left:3px solid #088bba;"><a   class="link_seccion"  href="<?=base_url()?>index.php/investigacion"> Investigaciones </a></label>
+                <label class="label_seccion" style="  border-left:4px solid #088bba;"><a   class="link_seccion"  href="<?=base_url()?>index.php/investigacion"> Investigaciones </a></label>
               </div>
             </div>
-           
-
-                <?php foreach ($investigaciones as $row): 
-
-                  $id_investigacion = $row['id_investigacion'];
-
-                ?>
+                  
                     <div class="row row_listado">
                       <div class="col-md-12 col-xs-12 " > 
-
                         <div class="row ">
-                            <div class="col-md-4 col-xs-12 " > 
-                              <img class="img-rounded img-thumbnail foto_investigacion" src="<?=base_url()?>assets/img/investigacion/<?=$row['imagen']?>">
+                            <div class="col-md-2 col-md-offset-1 col-xs-12 " > 
+                               <i class="fas fa-book fa-3x icono_investigaciones"></i>
                             </div>
-                            <div class="col-md-8 col-xs-12 " > 
-                              <a class="item_nombre hvr-overline-from-center" href='<?=site_url("investigacion/ver_investigacion/$id_investigacion")?>'> 
-                                <?=$row['titulo']?>
-                              </a>
-                              <br>
-                              <span><?=$row['descripcion_tipo_investigacion']?></span>
-      
-                                  
+                            <div class="col-md-8  col-xs-12" > 
+                              <span class="titulo_investigaciones"><a href="<?=base_url()?>index.php/investigacion/ver_investigacion_tipo/1"> Publicaciones </a> </span>
                             </div>
                         </div>
-
-                       
-
                       </div>
-                    </div>
-                <?php endforeach;  ?>
-                <a class="btn btn-primary btn-xs pull-right" href="">+ Investigación</a>
+                    </div> 
+                    <div class="row row_listado">
+                      <div class="col-md-12 col-xs-12 " > 
+                        <div class="row ">
+                            <div class="col-md-2 col-md-offset-1 col-xs-12 " > 
+                               <i class="fas fa-flask fa-3x icono_investigaciones"></i>
+                            </div>
+                            <div class="col-md-8 col-xs-12 " > 
+                              <span class="titulo_investigaciones" ><a href="<?=base_url()?>index.php/investigacion/ver_investigacion_tipo/3">Proyectos de investigación </a></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="row row_listado">
+                      <div class="col-md-12 col-xs-12 " > 
+                        <div class="row ">
+                            <div class="col-md-2 col-md-offset-1 col-xs-12 " > 
+                               <i class="fas fa-graduation-cap fa-3x icono_investigaciones"></i>
+                            </div>
+                            <div class="col-md-8 col-xs-12 " > 
+                              <span class="titulo_investigaciones" ><a href="<?=base_url()?>index.php/investigacion/ver_investigacion_tipo/2">Congresos</a></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div> 
+ 
       
           </div>
 
@@ -116,7 +123,7 @@
           <div class="col-md-6 col-xs-12 div_row"  > 
               <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion" style="  border-left:3px solid red;"><a  class="link_seccion" href="<?=base_url()?>index.php/novedad">Novedades</a></label>
+                  <label class="label_seccion" style="  border-left:4px solid #dc0404;"><a  class="link_seccion" href="<?=base_url()?>index.php/novedad">Novedades</a></label>
                 </div>
               </div>
               
@@ -129,13 +136,13 @@
 
                       <?php if($row['foto_novedad']): ?>
 
-                        <div class="col-md-4 col-xs-12 " >
-                           <img class="img-rounded img-thumbnail foto_investigacion" src="<?=base_url()?>assets/img/novedad/<?=$row['foto_novedad']?>">
+                        <div class="col-md-5 col-xs-12 " >
+                           <img class="img-rounded img-thumbnail " src="<?=base_url()?>assets/img/novedad/<?=$row['foto_novedad']?>">
                         </div>
 
                       <?php endif; ?>
 
-                      <div class="col-md-8 col-xs-12 " >
+                      <div class="col-md-7 col-xs-12 " >
                         <a class="item_nombre hvr-overline-from-center" href='<?=site_url("novedad/ver_novedad/$id_novedad")?>'>
                           <?=$row['titulo']?>            
                         </a>
@@ -145,7 +152,7 @@
                      </div>
                 <?php endforeach;  ?>
 
-                <a class="btn btn-danger btn-xs pull-right" href="">+ Novedad</a>
+                <a class="btn btn-danger btn-xs pull-right" href="<?=base_url()?>index.php/novedad">+ Novedades</a>
              
           </div>
 
@@ -159,7 +166,7 @@
         <div class="row div_row"> 
               <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion" style="  border-left:3px solid green;"><a class="link_seccion" href="<?=base_url()?>index.php/educacion">Cursos</a></label>
+                  <label class="label_seccion" style="  border-left:4px solid green;"><a class="link_seccion" href="<?=base_url()?>index.php/educacion">Educación</a></label>
                 </div>
               </div>
               <div class="row row_listado">
@@ -187,7 +194,7 @@
 
               </div> 
 
-              <a class="btn btn-success btn-xs pull-right" href="">+ Educación </a>
+              <a class="btn btn-success btn-xs pull-right" href="<?=base_url()?>index.php/educacion">+ Educación </a>
         </div>
       </div>
     </section>
@@ -227,7 +234,11 @@
         <div class="row div_row">
             <div class="row ">
                 <div class=" col-xs-12  "  > 
-                  <label class="label_seccion" style="  border-left:3px solid #d8a9b5;">Convenios</label>
+                  <label class="label_seccion" style="  border-left:4px solid #d8a9b5;">
+                    <a   class="link_seccion"  href="<?=base_url()?>index.php/investigacion">
+                      Convenios
+                    </a>
+                  </label>
                 </div>
               </div>
 

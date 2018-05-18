@@ -65,7 +65,7 @@
 
 								 		<?php endif; ?>
 
-								 		<span><a class="btn btn-primary btn-xs pull-right" href="">+ Información</a></span>
+								 		<span><a class="btn btn-primary btn-xs pull-right" href="<?=base_url()?>index.php/investigacion/ver_investigacion/<?=$row['id_investigacion']?>">+ Información</a></span>
 
 								 	</div>
 

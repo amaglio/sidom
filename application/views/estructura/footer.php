@@ -191,6 +191,35 @@
             });    
     });
     
+    jq_va(function(){
+
+            jq_va('#form_buscar_investigacion_tipo').validate({
+
+                rules :{
+
+ 
+                      id_tipo_investigacion : {
+                          required : true
+                      },
+                      anio: {
+                          required : true
+                      },
+                },
+                messages : {
+
+ 
+                      id_tipo_investigacion : {
+                          required: "Debe seleccionar un tipo"
+                      },
+                      anio: {
+                          required: "Debe ingresar el año."
+                      },
+                } 
+
+            });    
+    });
+
+    
     jq_va(document).ready(function(){
       jq_va('.customer-logos').slick({
         slidesToShow: 5,

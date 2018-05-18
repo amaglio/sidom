@@ -185,6 +185,37 @@ if(!function_exists('buscador_investigaciones'))
     }
 } 
 
+if(!function_exists('buscador_investigaciones_tipo'))
+{
+    function buscador_investigaciones_tipo($id_tipo_investigacion)
+    { 
+        $CI =& get_instance();
+        $CI->load->model('Investigacion_model'); 
+        $investigacion_tipo =  $CI->Investigacion_model->get_investigacion_tipo();
+
+        ?>  
+            <div class="row  " >
+                <div class="col-lg-12" >
+                    <form id="form_buscar_investigacion_tipo" name="form_buscar_investigacion_tipo" class="form-inline" method="post" action="<?=site_url('investigacion/buscar_investigacion_tipo')?>" style="padding-top: 20px">
+                            
+                            <input class="form-control" type="hidden" name="id_tipo_investigacion" id="id_tipo_investigacion" value="<?=$id_tipo_investigacion?>">
+                            
+                            <div class="col-md-4"> 
+                                
+                                <input class="form-control" type="input" name="anio" id="anio" placeholder="Ingresar año">
+                            </div>
+                            <div class=" col-md-4"> 
+                     
+                                <button type="submit" class="btn btn-block btn-primary  "><i class="fa fa-search" style="color:white !important;"></i> Buscar</button>
+                         
+                            </div>
+                    </form>
+                </div>
+            </div>
+       <?
+    }
+} 
+
 if(!function_exists('buscador_educacion'))
 {
     function buscador_educacion()

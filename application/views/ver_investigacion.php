@@ -30,8 +30,8 @@
 							 	<div class="col-md-8 col-xs-12">
 									<span style="font-weight: bold; font-size: 16px"><?=$investigacion['titulo']?></span> <br>
 							 		<span><?=$investigacion['autores']?></span> <br>
-							 		<span><?=$investigacion['resumen']?></span>
-							 		<span><?=$investigacion['fecha']?></span>
+							 		<span><?=$investigacion['referencia']?></span> <br>
+							 		<span><?=$investigacion['resumen']?></span> 
 							 		<span><?=$investigacion['actividades']?></span>
 
 							 		<?php if($investigacion['archivo_investigacion']): ?>

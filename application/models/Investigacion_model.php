@@ -109,6 +109,38 @@ class Investigacion_model extends CI_Model {
     return $resultado->result_array();
   }
 
+  function buscar_investigaciones_tipo($id_investigacion_tipo)
+  { 
+ 
+    $resultado = $this->db->query(" SELECT  *,
+                                            it.descripcion as descripcion_tipo_investigacion,
+                                             DATE_FORMAT(i.fecha, '%d/%m/%Y') as fecha
+                                    FROM    investigacion i,
+                                            investigacion_tipo it
+                                    WHERE     i.id_investigacion_tipo = it.id_investigacion_tipo 
+                                    AND       i.id_investigacion_tipo = ? 
+                                    ORDER BY  i.fecha_orden DESC
+                                    ", array($id_investigacion_tipo) );
+
+    return $resultado->result_array();
+  }
+
+  function buscar_investigaciones_tipo_anio($array)
+  { 
+ 
+    $resultado = $this->db->query(" SELECT  *,
+                                            it.descripcion as descripcion_tipo_investigacion,
+                                             DATE_FORMAT(i.fecha, '%d/%m/%Y') as fecha
+                                    FROM    investigacion i,
+                                            investigacion_tipo it
+                                    WHERE   i.id_investigacion_tipo = it.id_investigacion_tipo  
+                                    AND     i.id_investigacion_tipo = ? 
+                                    AND     YEAR(i.fecha) = ?
+                                    ORDER BY i.fecha_orden DESC
+                                    ", array( $array['id_tipo_investigacion'], $array['anio'] ) );
+
+    return $resultado->result_array();
+  }
 
   function get_informacion_investigacion($id_investigacion)
   {

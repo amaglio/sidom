@@ -100,7 +100,7 @@
 
 					<div class="row" >
 						<div class="col-md-12 col-xs-12">
-							<span style="font-size: 16px; font-weight: bold ">Subsecretaria de Desarrollo Humano de Vicente López </span> 
+							<span style="font-size: 16px; font-weight: bold ">Secretaría de la Tercera Edad de la Ciudad Autónoma de Buenos Aires. </span> 
 						</div>
 					</div>
 

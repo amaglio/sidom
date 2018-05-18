@@ -104,7 +104,18 @@ $config = array(
                                         ) 
                                 ),
 
-
+                'buscar_investigacion_tipo' => array(
+                                    array(
+                                            'field' => 'anio',
+                                            'label' => 'anio',
+                                            'rules' => 'trim|xss_clean|required'
+                                        ),
+                                    array(
+                                            'field' => 'id_tipo_investigacion',
+                                            'label' => 'id_tipo_investigacion',
+                                            'rules' => 'trim|xss_clean|required'
+                                        ) 
+                                ),
          
                                 
 );

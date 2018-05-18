@@ -11,9 +11,11 @@ a[class="item_nombre hvr-overline-from-center"]
 { 
  
   	font-weight: bold;
-    color: #002550 !important;  
-    font-size: 17px !important;
+    /*color: #014ca2 !important;*/
+    color: #002852;
+    font-size: 15px !important;
     padding-top: 3px;
+        letter-spacing: 0.5px;
 }
 
 
@@ -109,4 +111,31 @@ a[class="link_seccion"]
 { 
   color: #000 ;
 
+}
+
+.carousel-indicators
+{
+  bottom: none;
+  top:10px;
+}
+
+
+.titulo_investigaciones
+{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+      display: inline-block;
+    vertical-align: middle;
+}
+
+.icono_investigaciones
+{
+    /*background-color: red;*/
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #8080801a;
+    background-color: #b5abab36;
+    width: 70px;
+    text-align: center;
 }

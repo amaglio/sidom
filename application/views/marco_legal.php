@@ -31,6 +31,12 @@
 		<div class="container">
 
 			<div class="row div_row" >
+				<div class="col-md-12 col-xs-12">
+  						DIV DE TEXTO INTRODUCTORIO
+				</div>
+			</div>
+
+			<div class="row div_row" >
 				<div class="col-md-4 col-xs-12">
 					<a target="_blank" href="<?=base_url()?>assets/documentos/marco_legal/convencion_interamericana.pdf">
 					 	<img class="img-fluid rounded img-thumbnail img_proyecto" id="img_educacion" src="<?=base_url()?>assets/img/convenios/adultos_mayores.png">

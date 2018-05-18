@@ -251,9 +251,13 @@
                 <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Educacion' OR $this->uri->segment(1) == 'educacion' )? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Educacion">Educación</a></li>
                 <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Investigacion' OR $this->uri->segment(1) == 'investigacion')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Investigacion">Investigación</a></li>
                 <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Novedad' OR $this->uri->segment(1) == 'novedad' )? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Novedad">Novedades</a></li> 
-                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Proyecto')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Proyecto">Diseño de Proyectos</a></li> 
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Proyecto')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Proyecto">Consultoría y Asistencia Técnica</a></li> 
+
+                <?php /*
                 <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Informacion_gestion')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Informacion_gestion">Información para la Gestión</a></li>
-                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Marco_legal')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Marco_legal">Marco legal</a></li>
+                */ ?>
+
+                <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Marco_legal')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Marco_legal">Indicadores y Legislación</a></li>
                 <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Convenio')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Convenio">Convenios</a></li>
                 <li><a class="link_menu <? echo ($this->uri->segment(1) == 'Contacto')? 'active' : ' ' ;  ?>" href="<?=base_url()?>index.php/Contacto">Consultas</a></li>
               </ul>
